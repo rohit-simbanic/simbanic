@@ -13,7 +13,7 @@ export default function HeaderMenu() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="bg-white bg-opacity-5 text-white hidden md:block">
+    <header className="bg-white bg-opacity-5 text-white md:block">
       <div className="container mx-auto flex justify-between items-center h-24">
         <Link href="/" className="flex items-center justify-center">
           <Image
@@ -35,7 +35,11 @@ export default function HeaderMenu() {
                 }`}
               >
                 {link.name === "Contact us" ? (
-                  <span className="flex items-center bg-[#592CBA] text-white py-[25px] px-[26px] rounded-[14px]">
+                  <span
+                    className={`flex items-center ${
+                      theme === "dark" ? "bg-[#EC2F79]" : "bg-[#592CBA]"
+                    }  text-white py-[25px] px-[26px] rounded-[14px]`}
+                  >
                     <MdEmail className="mr-2" />
                     Contact us
                   </span>

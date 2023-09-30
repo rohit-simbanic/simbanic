@@ -94,7 +94,7 @@ export default function HeaderMenu() {
                   <span
                     className={`flex items-center ${
                       theme === "dark" ? "bg-[#EC2F79]" : "bg-[#592CBA]"
-                    }  text-white py-[25px] px-[26px] rounded-[14px]`}
+                    }  text-white py-[18px] px-[26px] rounded-[14px]`}
                   >
                     <MdEmail className="mr-2" />
                     Contact us

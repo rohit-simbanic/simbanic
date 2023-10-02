@@ -104,7 +104,7 @@ export default function Slider() {
               </div>
             </div>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-center lg:justify-end">
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}

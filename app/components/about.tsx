@@ -11,7 +11,7 @@ export default function About() {
   const { theme } = useTheme();
 
   return (
-    <section className="slider my-[80px]">
+    <section className="about my-[80px]">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 grid-cols-1 items-center">
           <div>
@@ -23,7 +23,7 @@ export default function About() {
               />
             </div>
           </div>
-          <div>
+          <div className="flex flex-col justify-end">
             <SectionHeading>
               <span className="dark:text-[#E5EDFE]">
                 Join us on this <br />
@@ -31,7 +31,7 @@ export default function About() {
               </span>
             </SectionHeading>
 
-            <p className="w-1/2">
+            <p className="w-3/4">
               Our team consists of seasoned professionals with diverse technical
               backgrounds. From software development and data analytics to
               cybersecurity and AI, we have the expertise ...

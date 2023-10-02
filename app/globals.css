@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "prompt";
+  src: url("../public/fonts/Prompt.ttf");
+}
+@font-face {
+  font-family: "gilroy";
+  src: url("../public/fonts/Gilroy.ttf");
+}
+@font-face {
+  font-family: "circularstd";
+  src: url("../public/fonts/CircularStd.otf");
+}
+@font-face {
+  font-family: "graphik";
+  src: url("../public/fonts/Graphik.otf");
+}

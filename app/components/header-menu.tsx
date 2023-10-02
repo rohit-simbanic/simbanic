@@ -80,32 +80,43 @@ export default function HeaderMenu() {
             )}
           </AnimatePresence>
         </nav>
-        <nav className="hidden lg:block font-semibold text-base lg:text-lg">
-          <ul className="mx-auto flex items-center">
-            {links.map((link, i) => (
-              <Link
-                key={i}
-                href={link.hash}
-                className={`p-5 xl:p-8 active text-[#1E273B] dark:text-[#C4CDE1] ${
-                  link.name === "Contact us" ? "menu-button" : ""
-                }`}
-              >
-                {link.name === "Contact us" ? (
-                  <span
-                    className={`flex items-center ${
-                      theme === "dark" ? "bg-[#EC2F79]" : "bg-[#592CBA]"
-                    }  text-white py-[18px] px-[26px] rounded-[14px]`}
-                  >
-                    <MdEmail className="mr-2" />
-                    Contact us
-                  </span>
-                ) : (
-                  <span>{link.name}</span>
-                )}
-              </Link>
-            ))}
-          </ul>
-        </nav>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 125,
+            delay: 0.1,
+            duration: 0.7,
+          }}
+        >
+          <nav className="hidden lg:block font-semibold text-base lg:text-lg">
+            <ul className="mx-auto flex items-center">
+              {links.map((link, i) => (
+                <Link
+                  key={i}
+                  href={link.hash}
+                  className={`p-5 xl:p-8 active text-[#1E273B] dark:text-[#C4CDE1] ${
+                    link.name === "Contact us" ? "menu-button" : ""
+                  }`}
+                >
+                  {link.name === "Contact us" ? (
+                    <span
+                      className={`flex items-center ${
+                        theme === "dark" ? "bg-[#EC2F79]" : "bg-[#592CBA]"
+                      }  text-white py-[18px] px-[26px] rounded-[14px]`}
+                    >
+                      <MdEmail className="mr-2" />
+                      Contact us
+                    </span>
+                  ) : (
+                    <span>{link.name}</span>
+                  )}
+                </Link>
+              ))}
+            </ul>
+          </nav>
+        </motion.div>
       </div>
     </header>
   );

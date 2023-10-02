@@ -43,7 +43,7 @@ export default function Slider() {
               initial={{ opacity: 0, y: -23 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -23 }}
-              className="font-prompt font-normal text-[20px]"
+              className="font-prompt font-normal text-[20px] dark:text-[#A0A0A0]"
             >
               Agile in Culture and Mindset.
             </motion.p>
@@ -60,7 +60,7 @@ export default function Slider() {
                 className="block active text-[#1E273B] dark:text-[#C4CDE1] my-7"
               >
                 <span
-                  className={`flex justify-center items-center font-bold rounded-[14px] w-[212px] m-auto lg:m-0 h-[52px] ${
+                  className={`flex justify-center items-center font-bold rounded-[14px] w-[212px] m-auto lg:m-0 h-[52px] hover:scale-[1.05] transition-all ${
                     theme === "dark" ? "bg-white" : "bg-[#FFDBBE]"
                   }  text-[#592CBA] dark:text-[#EC2F79] py-2 px-1`}
                 >
@@ -137,7 +137,7 @@ export default function Slider() {
               >
                 <Image
                   src={logo.imageUrl}
-                  className="w-[100px] h-[100px]"
+                  className="w-[150px] h-[100px] max-w-none"
                   alt={""}
                 />
               </div>

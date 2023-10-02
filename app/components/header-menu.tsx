@@ -48,7 +48,7 @@ export default function HeaderMenu() {
             {menuOpen && (
               <AnimatePresence>
                 <motion.ul
-                  className={`mt-2 absolute left-0 top-[90px] w-full ${
+                  className={`mt-2 absolute left-0 top-[90px] z-10 w-full ${
                     theme === "dark" ? "bg-[#ffffff] bg-opacity-5" : "bg-white"
                   }`}
                   initial={{ opacity: 0, y: -10 }} // Initial animation state

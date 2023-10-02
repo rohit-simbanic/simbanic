@@ -12,7 +12,7 @@ import memberThree from "@/public/images/memberThree.svg";
 import memberFour from "@/public/images/memberFour.svg";
 import star from "@/public/images/star.png";
 import { motion } from "framer-motion";
-import { clientsLogo } from "@/data/data";
+import Carousel from "./carousel";
 
 export default function Slider() {
   const { theme } = useTheme();
@@ -20,7 +20,7 @@ export default function Slider() {
   return (
     <section className="slider my-[80px]">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 grid-cols-1 items-center">
+        <div className="grid lg:grid-cols-2 grid-cols-1 items-center relative">
           <div className="pr-0 lg:pr-7 text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -125,23 +125,12 @@ export default function Slider() {
         </div>
         <div>
           <div>
-            <h4 className="uppercase text-center font-graphik font-semibold text-[14px] mt-28">
+            <h4 className="uppercase text-center font-graphik font-semibold text-[14px] mt-24 mb-9">
               TRUSTED BY +250 BUSINESSEs
             </h4>
           </div>
-          <div className="flex justify-center items-center gap-28">
-            {clientsLogo.map((logo, i) => (
-              <div
-                key={i}
-                className="w-[100px] h-[100px] lg:w-[100px] lg:h-[100px] mr-5"
-              >
-                <Image
-                  src={logo.imageUrl}
-                  className="w-[150px] h-[100px] max-w-none"
-                  alt={""}
-                />
-              </div>
-            ))}
+          <div>
+            <Carousel />
           </div>
         </div>
       </div>

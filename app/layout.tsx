@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-[#FDF8F4] dark:bg-[#0E0421]`}>
+        <div className="bg-[#dbd7fb] absolute top-[7rem] -z-10 h-[20.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[33.75rem] right-[0rem] dark:bg-[#676394]"></div>
         <ThemeContextProvider>
           <HeaderMenu />
           {children}

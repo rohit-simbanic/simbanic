@@ -21,7 +21,7 @@ export default function Slider() {
     <section className="slider my-[80px]">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 grid-cols-1 items-center">
-          <div className="pr-7 text-center lg:text-left">
+          <div className="pr-0 lg:pr-7 text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}

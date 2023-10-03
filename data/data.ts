@@ -4,6 +4,7 @@ import atlassian from "@/public/images/atlassian.svg";
 import click from "@/public/images/click-travel.svg";
 import notion from "@/public/images/notion.svg";
 import hr from "@/public/images/h&r-block.svg";
+import etoro from "@/public/images/etoro.svg";
 import contentful from "@/public/images/contentful-logo.svg";
 export const links = [
   {
@@ -50,6 +51,33 @@ export const clientsLogo = [
   },
   {
     imageUrl: hr,
+  },
+  {
+    imageUrl: etoro,
+  },
+  {
+    imageUrl: contentful,
+  },
+  {
+    imageUrl: da,
+  },
+  {
+    imageUrl: inter,
+  },
+  {
+    imageUrl: atlassian,
+  },
+  {
+    imageUrl: click,
+  },
+  {
+    imageUrl: notion,
+  },
+  {
+    imageUrl: hr,
+  },
+  {
+    imageUrl: etoro,
   },
   {
     imageUrl: contentful,

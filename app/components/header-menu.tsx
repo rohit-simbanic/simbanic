@@ -12,7 +12,7 @@ import Hamburger from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function HeaderMenu() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -48,8 +48,8 @@ export default function HeaderMenu() {
             {menuOpen && (
               <AnimatePresence>
                 <motion.ul
-                  className={`mt-2 absolute left-0 top-[90px] z-10 w-full ${
-                    theme === "dark" ? "bg-[#ffffff] bg-opacity-5" : "bg-white"
+                  className={`mt-2 absolute left-0 top-[57px] z-10 w-full ${
+                    theme === "dark" ? "bg-[#0E0421]" : "bg-white"
                   }`}
                   initial={{ opacity: 0, y: -10 }} // Initial animation state
                   animate={{ opacity: 1, y: 0 }} // Animation when the menu opens

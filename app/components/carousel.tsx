@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { clientsLogo } from "@/data/data";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import styles from "./Carousel.module.css";
-import { useTheme } from "../context/theme-context";
 
 export default function Carousel() {
-  const { theme } = useTheme();
   return (
     <div className={`${styles.slider} dark:bg-[#0E0421]`}>
       <div

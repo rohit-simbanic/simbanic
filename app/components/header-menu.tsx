@@ -30,6 +30,7 @@ export default function HeaderMenu() {
               alt="logo"
               width={232}
               height={36}
+              priority={true}
             />
           </Link>
           <nav className="block font-semibold text-base lg:text-lg lg:hidden">

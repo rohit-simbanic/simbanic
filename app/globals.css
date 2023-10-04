@@ -18,3 +18,6 @@
   font-family: "graphik";
   src: url("../public/fonts/Graphik.otf");
 }
+.overlay__cta {
+  @apply bg-[url('../public/images/help/bg-man.svg')] bg-slate-900 bg-no-repeat bg-left bg-cover;
+}

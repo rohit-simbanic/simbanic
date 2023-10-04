@@ -1,4 +1,5 @@
 import About from "./components/about";
+import Copyright from "./components/copyright";
 import CTA from "./components/cta";
 import Footer from "./components/footer";
 import Portfolio from "./components/portfolio";
@@ -14,6 +15,7 @@ export default function Home() {
       <Portfolio />
       <CTA />
       <Footer />
+      <Copyright />
     </main>
   );
 }

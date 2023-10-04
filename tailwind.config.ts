@@ -14,6 +14,9 @@ const config: Config = {
         circularstd: ["circularstd", "sans"],
         graphik: ["graphik", "sans"],
       },
+      screens: {
+        "3xl": "1600px",
+      },
     },
   },
   plugins: [],

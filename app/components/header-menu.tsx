@@ -23,7 +23,6 @@ export default function HeaderMenu() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if the user has scrolled down, and add a class to change the background color.
       if (window.scrollY > 120) {
         setIsScrolled(true);
       } else {
@@ -31,10 +30,8 @@ export default function HeaderMenu() {
       }
     };
 
-    // Add a scroll event listener when the component mounts.
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener when the component unmounts.
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -44,7 +41,7 @@ export default function HeaderMenu() {
     <header
       className={`bg-${
         isScrolled
-          ? "white fixed top-0 left-0 right-0 z-20 dark:bg-opacity-5"
+          ? "white fixed top-0 left-0 right-0 z-20 dark:bg-[#0E0421]"
           : "white bg-opacity-5"
       } text-white md:block `}
     >

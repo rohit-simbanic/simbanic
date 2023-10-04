@@ -37,21 +37,26 @@ export default function HeaderMenu() {
     };
   }, []);
   const headerVariants = {
-    visible: { y: 0, opacity: 1 },
-    hidden: { y: 0, opacity: 1 },
+    initial: { y: -64, opacity: 1 }, // Initial state when not scrolled
+    scrolled: { y: 0, opacity: 1 }, // State after scrolling 20px
+  };
+
+  const headerTransition = {
+    duration: 0.3,
+    ease: "easeInOut",
   };
 
   return (
     <motion.header
       className={`bg-${
         isScrolled
-          ? "white fixed top-0 left-0 right-0 z-20 dark:bg-[#0E0421]"
+          ? "white fixed top-0 left-0 right-0 z-20 dark:bg-[#0E0421] pt-0"
           : "white bg-opacity-5"
-      } text-white md:block `}
-      initial="visible"
-      animate={isScrolled ? "hidden" : "visible"}
+      } text-white md:block pt-[65px]`}
+      initial="initial" // Initial animation state
+      animate={isScrolled ? "scrolled" : "initial"} // Animate when scrolled 20px
       variants={headerVariants}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
+      transition={headerTransition}
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">

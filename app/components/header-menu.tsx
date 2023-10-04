@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTheme } from "../context/theme-context";
 import Image from "next/image";
 import logoLight from "@/public/images/logoLight.svg";
@@ -19,8 +19,35 @@ export default function HeaderMenu() {
     setMenuOpen(!menuOpen);
   };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if the user has scrolled down, and add a class to change the background color.
+      if (window.scrollY > 120) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Add a scroll event listener when the component mounts.
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts.
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="bg-white bg-opacity-5 text-white md:block">
+    <header
+      className={`bg-${
+        isScrolled
+          ? "white fixed top-0 left-0 right-0 z-20 dark:bg-opacity-5"
+          : "white bg-opacity-5"
+      } text-white md:block `}
+    >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center justify-center">

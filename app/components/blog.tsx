@@ -15,7 +15,7 @@ export default function Blog() {
           <span className="dark:text-[#E5EDFE]">{blogData.heading}</span>
         </SectionHeading>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 items-center relative">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 items-center relative px-5">
         {blogData.blogItesm.map((item, index) => (
           <div key={index}>
             <Image src={item.blogImage} className="w-full" alt={""} />

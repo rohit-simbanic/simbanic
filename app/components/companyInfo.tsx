@@ -9,7 +9,9 @@ export default function CompanyInfo() {
         <div
           key={index}
           className={`py-8 ${
-            index !== companyInfo.length - 1 ? "border-r border-gray-300" : ""
+            index !== companyInfo.length - 1
+              ? "md:border-r md:border-gray-300"
+              : ""
           }`}
         >
           <SectionHeading>{info.heading}</SectionHeading>

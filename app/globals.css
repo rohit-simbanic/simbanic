@@ -19,5 +19,12 @@
   src: url("../public/fonts/Graphik.otf");
 }
 .overlay__cta {
-  @apply bg-[url('../public/images/help/bg-man.svg')] bg-slate-900 bg-no-repeat bg-left bg-cover;
+  @apply bg-[url('../public/images/help/bg-man.svg')] bg-slate-900 bg-no-repeat bg-center bg-cover;
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }

@@ -50,7 +50,7 @@ export default function HeaderMenu() {
     <motion.header
       className={`bg-${
         isScrolled
-          ? "white lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-20 dark:bg-[#0E0421] pt-0 dark:border-b dark:border-solid dark:border-cyan-800"
+          ? "white lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-20 dark:bg-[#0E0421] lg:pt-0 dark:border-b dark:border-solid dark:border-cyan-800"
           : "white bg-opacity-5"
       } text-white md:block pt-[65px]`}
       initial="initial" // Initial animation state

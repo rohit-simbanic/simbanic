@@ -5,7 +5,7 @@ export default function Copyright() {
     <>
       <section className="copyright py-[50px] bg-white dark:bg-opacity-5 rounded-t-[60px]">
         <div className="container mx-auto">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center flex-col sm:flex-row">
             <p className="text-[#4C4C4C] text-[14px] font-graphik font-normal dark:text-gray-100">
               © 2023 Simbanic. All Rights Reserved.
             </p>

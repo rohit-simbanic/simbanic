@@ -10,7 +10,7 @@ export default function CTA() {
     <>
       <section className="cta py-[80px] overlay__cta">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-12 grid-cols-12 gap-10 items-center relative">
+          <div className="grid lg:grid-cols-12 grid-cols-12 sm:gap-10 items-center relative">
             <div className="lg:col-span-6 md:col-span-6"></div>
             <div className="lg:col-span-6 md:col-span-6 col-span-full">
               <div className="max-w-xxl p-10 bg-white opacity-[0.8] sm:opacity-[1] rounded-[60px] shadow-md mx-2">

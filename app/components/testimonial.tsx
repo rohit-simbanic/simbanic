@@ -20,7 +20,7 @@ export default function Testimonial() {
           alt="quoteIcon"
           className="absolute top-[-59px] left-[63px]"
         />
-        <div className="py-8 ps-16 pr-16 lg:pr-0 w-full lg:w-2/3">
+        <div className="py-8 ps-8 pr-8 sm:ps-12 sm:pr-12 md:ps-16 md:pr-16 lg:pr-0 w-full lg:w-2/3">
           <p className="text-[18px] text-[#4C4C4C] leading-[160%] mb-14">
             {testimonialData.description}
           </p>
@@ -33,7 +33,7 @@ export default function Testimonial() {
           <Image src={testimonialData.linkedIn} alt="linkedin" />
         </div>
         <div className="relative w-full mx-auto lg:w-1/3">
-          <div className="bg-[#dbd7fb] absolute top-[7rem] z-0 h-[20.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[33.75rem] right-[0rem] dark:bg-[#676394]"></div>
+          <div className="bg-[#dbd7fb] hidden sm:block absolute top-[7rem] z-0 h-[20.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[33.75rem] right-[0rem] dark:bg-[#676394]"></div>
           <Image
             src={testimonialData.clientPhoto}
             alt="client"

@@ -12,9 +12,9 @@ export default function Footer() {
   return (
     <>
       <section className="cta py-[80px]">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-12 grid-cols-12 gap-10 relative">
-            <div className="md:col-span-4 col-span-6 mx-5">
+        <div className="container mx-auto px-5">
+          <div className="grid lg:grid-cols-12 grid-cols-12 sm:gap-10 relative">
+            <div className="md:col-span-4 sm:col-span-6 col-span-12">
               <Link href="/" className="">
                 <Image
                   className="h-16 sm:w-232"
@@ -65,7 +65,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="md:col-span-3 col-span-6 mx-5">
+            <div className="md:col-span-3 sm:col-span-6 col-span-12">
               <h4 className="text-[#1A1A1A] font-semibold font-graphik text-[24px] dark:text-white mb-5">
                 Services
               </h4>
@@ -79,7 +79,7 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
-            <div className="md:col-span-3 col-span-6 mx-5">
+            <div className="md:col-span-3 sm:col-span-6 col-span-12">
               <h4 className="text-[#1A1A1A] font-semibold font-graphik text-[24px] dark:text-white mb-5">
                 Company
               </h4>
@@ -93,7 +93,7 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
-            <div className="md:col-span-2 col-span-6 mx-5">
+            <div className="md:col-span-2 sm:col-span-6 col-span-12">
               <h4 className="text-[#1A1A1A] font-semibold font-graphik text-[24px] dark:text-white mb-5">
                 Quick Links
               </h4>

@@ -6,6 +6,13 @@ import notion from "@/public/images/notion.svg";
 import hr from "@/public/images/h&r-block.svg";
 import etoro from "@/public/images/etoro.svg";
 import contentful from "@/public/images/contentful-logo.svg";
+import daDark from "@/public/images/daDark.svg";
+import interDark from "@/public/images/interDark.svg";
+import atlassianDark from "@/public/images/atlassianDark.svg";
+import clickTravelDark from "@/public/images/clickTravelDark.svg";
+import hrDark from "@/public/images/hrDark.svg";
+import etoroDark from "@/public/images/etoroDark.svg";
+import contentfulDark from "@/public/images/contentfulDark.svg";
 
 export const links = [
   {
@@ -37,51 +44,67 @@ export const links = [
 export const clientsLogo = [
   {
     imageUrl: da,
+    imageUrlDark: daDark,
   },
   {
     imageUrl: inter,
+    imageUrlDark: interDark,
   },
   {
     imageUrl: atlassian,
+    imageUrlDark: atlassianDark,
   },
   {
     imageUrl: click,
+    imageUrlDark: clickTravelDark,
   },
   {
     imageUrl: notion,
+    imageUrlDark: notion,
   },
   {
     imageUrl: hr,
+    imageUrlDark: hrDark,
   },
   {
     imageUrl: etoro,
+    imageUrlDark: etoroDark,
   },
   {
     imageUrl: contentful,
+    imageUrlDark: contentfulDark,
   },
   {
     imageUrl: da,
+    imageUrlDark: daDark,
   },
   {
     imageUrl: inter,
+    imageUrlDark: interDark,
   },
   {
     imageUrl: atlassian,
+    imageUrlDark: atlassianDark,
   },
   {
     imageUrl: click,
+    imageUrlDark: clickTravelDark,
   },
   {
     imageUrl: notion,
+    imageUrlDark: notion,
   },
   {
     imageUrl: hr,
+    imageUrlDark: hrDark,
   },
   {
     imageUrl: etoro,
+    imageUrlDark: etoroDark,
   },
   {
     imageUrl: contentful,
+    imageUrlDark: contentfulDark,
   },
 ] as const;
 

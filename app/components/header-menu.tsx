@@ -36,14 +36,22 @@ export default function HeaderMenu() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const headerVariants = {
+    visible: { y: 0, opacity: 1 },
+    hidden: { y: 0, opacity: 1 },
+  };
 
   return (
-    <header
+    <motion.header
       className={`bg-${
         isScrolled
           ? "white fixed top-0 left-0 right-0 z-20 dark:bg-[#0E0421]"
           : "white bg-opacity-5"
       } text-white md:block `}
+      initial="visible"
+      animate={isScrolled ? "hidden" : "visible"}
+      variants={headerVariants}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
@@ -147,6 +155,6 @@ export default function HeaderMenu() {
           </motion.div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

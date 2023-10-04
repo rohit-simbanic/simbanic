@@ -26,6 +26,7 @@ export default function Slider() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
+              className="-z-10 relative"
             >
               <SectionHeading>
                 <span className="dark:text-[#E5EDFE]">
@@ -43,7 +44,7 @@ export default function Slider() {
               initial={{ opacity: 0, y: -23 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -23 }}
-              className="font-prompt font-normal text-[20px] dark:text-[#A0A0A0]"
+              className="font-prompt font-normal text-[20px] dark:text-[#A0A0A0] -z-10 relative"
             >
               Agile in Culture and Mindset.
             </motion.p>

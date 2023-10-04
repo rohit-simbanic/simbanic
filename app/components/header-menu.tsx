@@ -50,7 +50,7 @@ export default function HeaderMenu() {
     <motion.header
       className={`bg-${
         isScrolled
-          ? "white fixed top-0 left-0 right-0 z-20 dark:bg-[#0E0421] pt-0"
+          ? "white lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-20 dark:bg-[#0E0421] pt-0 dark:border-b dark:border-solid dark:border-cyan-800"
           : "white bg-opacity-5"
       } text-white md:block pt-[65px]`}
       initial="initial" // Initial animation state
@@ -86,11 +86,11 @@ export default function HeaderMenu() {
             {menuOpen && (
               <AnimatePresence>
                 <motion.ul
-                  className={`mt-2 absolute left-0 top-[57px] z-10 w-full ${
+                  className={`mt-[73px] absolute left-0 top-[57px] z-30 w-full ${
                     theme === "dark" ? "bg-[#0E0421]" : "bg-white"
                   }`}
-                  initial={{ opacity: 0, y: -10 }} // Initial animation state
-                  animate={{ opacity: 1, y: 0 }} // Animation when the menu opens
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                 >
                   {links.map((link, i) => (

@@ -11,7 +11,7 @@ export default function Service() {
           className="w-full px-4 py-6 group transition-transform transform hover:scale-105 cursor-pointer"
           key={service.id}
         >
-          <div className="relative flex flex-col sm:flex-row gap-[36px] items-start group-hover:bg-white group-hover:bg-opacity-30 group-hover:rounded-lg p-4 text-left">
+          <div className="relative flex flex-col sm:flex-row gap-[36px] items-start group-hover:bg-[#0000001a] group-hover:bg-opacity-[0.1] group-hover:rounded-lg p-4 text-left">
             <Image
               src={service.logoUrl}
               alt={service.name}

@@ -11,12 +11,14 @@
   "dependencies": {
     "framer-motion": "^10.16.4",
     "hamburger-react": "^2.5.0",
+    "locomotive-scroll": "^4.1.4",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "^4.11.0"
   },
   "devDependencies": {
+    "@types/locomotive-scroll": "^4.1.1",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",

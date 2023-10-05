@@ -11,6 +11,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function PortfolioItem() {
   const { theme } = useTheme();
+
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -18,6 +19,7 @@ export default function PortfolioItem() {
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
     <div className="text-center relative">
       <div className="bg-[#dbd7fb] absolute top-[21rem] z-0 left-[-23rem] h-[15rem] w-[24rem] rounded-full blur-[4rem] sm:w-[36.75rem] md:left-[-23rem] lg:left-[-23rem] xl:left-[-23rem] 2xl:left-[-23rem] dark:bg-[#676394] dark:blur-[11rem]"></div>
@@ -28,19 +30,20 @@ export default function PortfolioItem() {
       <SectionHeading>
         <span className="dark:text-[#E5EDFE]">{portfolioItem.heading}</span>
       </SectionHeading>
-      <motion.div
-        ref={ref}
-        style={{
-          scale: scaleProgess,
-          opacity: opacityProgess,
-        }}
-      >
-        {portfolioItem.portfolioItems.map((item, index) => (
+
+      {portfolioItem.portfolioItems.map((item, index) => (
+        <motion.div
+          ref={ref}
+          style={{
+            scale: scaleProgess,
+            opacity: opacityProgess,
+          }}
+          key={index}
+        >
           <div
             className={`w-full mx-auto text-center lg:text-left rounded-lg my-10 py-16 px-12 flex relative overflow-hidden ${
               index % 2 !== 0 ? "bg-[#FDF1F0]" : "bg-[#E5EDFF]"
             }`}
-            key={index}
           >
             <div className="w-full lg:w-1/2">
               <h3 className="relative font-semibold text-[#111827] text-[24px] font-graphik mb-4">
@@ -77,8 +80,9 @@ export default function PortfolioItem() {
               />
             </div>
           </div>
-        ))}
-      </motion.div>
+        </motion.div>
+      ))}
+
       <Link
         href="/"
         className="flex justify-center py-8 active text-[#1E273B] dark:text-[#C4CDE1]"

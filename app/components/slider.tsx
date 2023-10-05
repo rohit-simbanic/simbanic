@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useTheme } from "../context/theme-context";
 import SectionHeading from "./section-heading";
 import Link from "next/link";

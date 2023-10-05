@@ -60,7 +60,7 @@ export default function HeaderMenu() {
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
-          <Link href="/" className="flex items-center justify-center">
+          <Link href="/" className="flex items-center justify-center px-1">
             <Image
               className="h-16 sm:w-232"
               src={theme === "dark" ? logoDark : logoLight}

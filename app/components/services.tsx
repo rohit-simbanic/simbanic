@@ -1,21 +1,36 @@
+"use client";
 import React from "react";
 import { services } from "@/data/data";
 import SectionHeading from "./section-heading";
 import Service from "./service";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Services() {
+  const pathname = usePathname();
   return (
     <section className="services mt-[80px] bg-[#1B2335] relative">
       <div className="container mx-auto text-center lg:text-left">
-        <p className="text-[16px] text-[#FDB795] font-prompt pt-28 pb-7">
-          {services.subheading}
+        <p
+          className={`text-[16px] ${
+            pathname === "/" ? "text-[#FDB795]" : "text-[#D384FF]"
+          } font-prompt pt-28 pb-7`}
+        >
+          {pathname === "/"
+            ? `${services.subheading}`
+            : `${services.subheadingServices}`}
         </p>
         <SectionHeading>
-          <span
-            className="text-white text-[40px] leading-[134%]"
-            dangerouslySetInnerHTML={{ __html: services.heading }}
-          />
+          {pathname === "/" ? (
+            <span
+              className="text-white text-[40px] leading-[134%]"
+              dangerouslySetInnerHTML={{ __html: services.heading }}
+            />
+          ) : (
+            <p className="text-white text-[40px] leading-[134%]">
+              <span className="text-[#B272FF]">Simbanic</span> Service Offerings
+            </p>
+          )}
         </SectionHeading>
         <p
           className="w-3/4 dark:text-[#D7D2D2] text-[#E4E4E4] leading-[150%] text-[18px] my-14 mx-auto lg:mx-0"

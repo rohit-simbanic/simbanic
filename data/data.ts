@@ -110,6 +110,7 @@ export const clientsLogo = [
 
 export const services = {
   subheading: "What We Can Do For You",
+  subheadingServices: "Our Services",
   heading: "Services we can help<br/> you with",
   details:
     "Explore our diverse range of services, delivering cutting-edge<br/> solutions tailored to your specific needs and goals.",
@@ -155,6 +156,50 @@ export const services = {
       description:
         "Building Impactful Software Products to Solve Your Unique Business Problems",
       logoUrl: require("@/public/images/services/quality.svg"),
+    },
+  ],
+  servicesProductEngItem: [
+    {
+      id: 1,
+      name: "Product Discovery and Design",
+      description:
+        "Substitute speculation with effective product exploration and verified methodologies. Our approach involves designing a strategic canvas and collaborating with you to gain insights into user experiences and essential tasks to accomplish.",
+      logoUrl: require("@/public/images/services/productEng/s1.svg"),
+    },
+    {
+      id: 2,
+      name: "UX Design and Development Services",
+      description:
+        "Utilize data to comprehend customer behavior and motivation. Develop user-friendly flows that simplify tasks. Our innovative developers materialize the vision through interactive designs.",
+      logoUrl: require("@/public/images/services/productEng/s2.svg"),
+    },
+    {
+      id: 3,
+      name: "App Development Services",
+      description:
+        "Transforming product designs into tangible products can be a daunting task. However, we have a proven history of designing for scalability and creating products using an iterative development approach.",
+      logoUrl: require("@/public/images/services/productEng/s3.svg"),
+    },
+    {
+      id: 4,
+      name: "Product Transformation and ReEngineering Services",
+      description:
+        "Enhance your product by implementing a more robust user experience or adopting a new architecture that supports SaaS delivery. Our product transformation services provide a seamless upgrade process with minimal disruption to existing users",
+      logoUrl: require("@/public/images/services/productEng/s4.svg"),
+    },
+    {
+      id: 5,
+      name: "Software Qualify Services",
+      description:
+        "Create resilient digital products by applying the principles of quality management processes and utilizing quality tools to ensure their excellence. We focus on continuously improving the quality of products through an ongoing cycle of planning, execution, and assessment.",
+      logoUrl: require("@/public/images/services/productEng/s5.svg"),
+    },
+    {
+      id: 6,
+      name: "Product Transformation and ReEngineering Services",
+      description:
+        "Enhance your product by implementing a more robust user experience or adopting a new architecture that supports SaaS delivery. Our product transformation services provide a seamless upgrade process with minimal disruption to existing users",
+      logoUrl: require("@/public/images/services/productEng/s6.svg"),
     },
   ],
 };

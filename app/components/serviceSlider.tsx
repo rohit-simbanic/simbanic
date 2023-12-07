@@ -1,12 +1,12 @@
 "use client";
 
-import { useTheme } from "../context/theme-context";
 import SectionHeading from "./section-heading";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function ServiceSlider() {
-  const { theme } = useTheme();
+  const pathname = usePathname();
 
   return (
     <section className="service-slider mt-[56px] mb-[80px]">
@@ -36,11 +36,48 @@ export default function ServiceSlider() {
               duration: 0.7,
             }}
           >
-            <Image
-              src={require("@/public/images/services/productEng/slider.svg")}
-              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
-              alt={""}
-            />
+            {pathname === "/service/product-engineering" && (
+              <Image
+                src={require("@/public/images/services/productEng/slider.svg")}
+                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+                alt={""}
+              />
+            )}
+            {pathname === "/service/performance-engineering" && (
+              <Image
+                src={require("@/public/images/services/performanceEng/slider.svg")}
+                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+                alt={""}
+              />
+            )}
+            {pathname === "/service/digital-experience" && (
+              <Image
+                src={require("@/public/images/services/digitalExp/slider.svg")}
+                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+                alt={""}
+              />
+            )}
+            {pathname === "/service/application-modernisation" && (
+              <Image
+                src={require("@/public/images/services/applicationModern/slider.svg")}
+                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+                alt={""}
+              />
+            )}
+            {pathname === "/service/cloud-engineering" && (
+              <Image
+                src={require("@/public/images/services/cloudEng/slider.svg")}
+                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+                alt={""}
+              />
+            )}
+            {pathname === "/service/quality-engineering" && (
+              <Image
+                src={require("@/public/images/services/automationEng/slider.svg")}
+                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+                alt={""}
+              />
+            )}
           </motion.div>
         </div>
       </div>

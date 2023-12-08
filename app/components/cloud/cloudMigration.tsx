@@ -1,15 +1,8 @@
 "use client";
 import React from "react";
-import SectionHeading from "../section-heading";
-import Link from "next/link";
-import { MdEmail } from "react-icons/md";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { useTheme } from "@/app/context/theme-context";
 
 export default function CloudMigration() {
-  const { theme } = useTheme();
-  const pathname = usePathname();
   return (
     <section className="cloudconsulting mt-[80px] relative">
       <div className="container mx-auto">
@@ -43,7 +36,7 @@ export default function CloudMigration() {
 
             <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[20px] my-4 mx-auto lg:mx-0">
               This may involve providing training and knowledge transfer to the
-              organization's IT staff to enablethem to effectively manage and
+              organizations IT staff to enablethem to effectively manage and
               operate cloud environments
             </p>
           </div>
@@ -117,7 +110,7 @@ export default function CloudMigration() {
             </h2>
 
             <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[20px] my-4 mx-auto lg:mx-0">
-              This involves migrating an organization's applications to the
+              This involves migrating an organizations applications to the
               cloud, which may include re-hosting, re-platforming, or
               re-architecting applications to run effectively in the cloud
               environment

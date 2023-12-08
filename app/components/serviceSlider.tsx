@@ -26,6 +26,25 @@ export default function ServiceSlider() {
               </span>
             </SectionHeading>
           </motion.div>
+          {pathname === "/service/cloud-engineering" && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="-z-10 relative"
+            >
+              <h3 className="text-[#162753] text-[20px] font-prompt text-center leading-[160%] font-semibold dark:text-white">
+                Scalable Cloud Native Application Development Services for
+                Business Growth
+              </h3>
+              <p className="text-[#A8ADB3] font-prompt text-[16px] text-center leading-[160%]">
+                By leveraging extensive tooling, development techniques, and
+                adopting a cloud-native approach, we can simplify
+                <br /> operations, build and deliver with speed and seamlessly
+                weave security into your software delivery process.
+              </p>
+            </motion.div>
+          )}
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}

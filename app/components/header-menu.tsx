@@ -180,7 +180,7 @@ export default function HeaderMenu() {
                                   link.name === "Company"
                                     ? "grid-cols-1"
                                     : "grid-cols-2"
-                                }  gap-[.5rem]`}
+                                }  gap-[.1rem]`}
                               >
                                 {link.sublinks.map((mysublinks, i) => (
                                   <div key={i}>

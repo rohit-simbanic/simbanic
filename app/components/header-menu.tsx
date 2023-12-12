@@ -10,6 +10,8 @@ import { links } from "@/data/data";
 import { MdEmail } from "react-icons/md";
 import Hamburger from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { FaChevronUp } from "react-icons/fa6";
+import { FaChevronDown } from "react-icons/fa6";
 
 export default function HeaderMenu() {
   const { theme } = useTheme();
@@ -70,6 +72,7 @@ export default function HeaderMenu() {
               priority={true}
             />
           </Link>
+          {/* mobile menu */}
           <nav className="block font-semibold text-base lg:text-lg lg:hidden">
             <button
               className="text-gray-800 p-2 rounded-full focus:outline-none focus:bg-opacity-10"
@@ -132,12 +135,12 @@ export default function HeaderMenu() {
             }}
           >
             <nav className="font-semibold text-base lg:text-lg">
-              <ul className="mx-auto flex items-center">
+              <ul className="mx-auto flex items-center ">
                 {links.map((link, i) => (
                   <Link
                     key={i}
                     href={link.hash}
-                    className={`p-3 xl:px-8 xl:py-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
+                    className={`relative group p-3 xl:px-8 xl:py-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
                       link.name === "Contact us" ? "menu-button" : ""
                     }`}
                   >
@@ -150,6 +153,60 @@ export default function HeaderMenu() {
                         <MdEmail className="mr-2" />
                         Contact us
                       </span>
+                    ) : link.name === "Company" || link.name === "Services" ? (
+                      <div className="">
+                        <span className="flex items-center gap-2">
+                          {link.name}
+                          <FaChevronDown />
+                        </span>
+                        {(link.name === "Company" ||
+                          link.name === "Services") && (
+                          <div>
+                            <div
+                              className={`absolute top-[2.5rem] hidden group-hover:md:block hover:md:block z-50 ${
+                                link.name === "Company"
+                                  ? "w-[160px]"
+                                  : "w-[500px]"
+                              }`}
+                            >
+                              <div className="py-3">
+                                <div
+                                  className="w-4 h-4 left-3 absolute 
+                            mt-1 bg-white rotate-45"
+                                ></div>
+                              </div>
+                              <div
+                                className={`bg-white p-5 grid ${
+                                  link.name === "Company"
+                                    ? "grid-cols-1"
+                                    : "grid-cols-2"
+                                }  gap-[.5rem]`}
+                              >
+                                {link.sublinks.map((mysublinks, i) => (
+                                  <div key={i}>
+                                    {/* <h1 className="text-lg font-semibold">
+                                      {mysublinks.Head}
+                                    </h1> */}
+                                    {mysublinks.sublink.map((slink, i) => (
+                                      <li
+                                        className="text-sm text-gray-600 my-2.5"
+                                        key={i}
+                                      >
+                                        <Link
+                                          href={slink.link}
+                                          className="hover:text-primary"
+                                        >
+                                          {slink.name}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     ) : (
                       <span>{link.name}</span>
                     )}

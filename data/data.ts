@@ -22,10 +22,68 @@ export const links = [
   {
     name: "Company",
     hash: "/company",
+    submenu: true,
+    sublinks: [
+      {
+        Head: "Topwear",
+        sublink: [
+          { name: "About Us", link: "/about-us" },
+          { name: "Contact", link: "/contact" },
+        ],
+      },
+    ],
   },
   {
     name: "Services",
     hash: "/services",
+    submenu: true,
+    sublinks: [
+      {
+        Head: "Topwear",
+        sublink: [
+          { name: "Product Engineering", link: "/service/product-engineering" },
+        ],
+      },
+      {
+        sublink: [
+          {
+            name: "Performance Engineering",
+            link: "/service/performance-engineering",
+          },
+        ],
+      },
+      {
+        sublink: [
+          {
+            name: "Application Modernisation",
+            link: "/service/application-modernisation",
+          },
+        ],
+      },
+      {
+        sublink: [
+          { name: "Digital Experience", link: "/service/digital-experience" },
+        ],
+      },
+      {
+        sublink: [
+          { name: "Cloud Engineering", link: "/service/cloud-engineering" },
+        ],
+      },
+      {
+        sublink: [
+          {
+            name: "Application Modernisation",
+            link: "/service/application-modernisation",
+          },
+        ],
+      },
+      {
+        sublink: [
+          { name: "Quality Engineering", link: "/service/quality-engineering" },
+        ],
+      },
+    ],
   },
 
   {

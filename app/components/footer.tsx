@@ -25,7 +25,7 @@ export default function Footer() {
                   priority={true}
                 />
               </Link>
-              <p className="text-[16px] text-[#4C4C4] dark:text-[#E5EDFE] font-graphik font-normal my-7">
+              <p className="text-[16px] text-[#4C4C4] dark:text-[#E5EDFE] font-graphik font-normal my-7 w-2/3">
                 {footerData.footerDetails}
               </p>
               <div className="flex gap-3 my-6">
@@ -72,7 +72,7 @@ export default function Footer() {
               {footerData.footerLinks.map((footerLink, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  href={footerLink.hash}
                   className="text-[#1A1A1A] text-[16px] font-graphik font-normal dark:text-[#E5EDFE] leading-9"
                 >
                   <p>{footerLink.linkName}</p>

@@ -346,30 +346,23 @@ export const blogData = {
 
 export const footerData = {
   footerDetails:
-    "A leading data science company enabling companies to establish data-driven growth paths.",
-  phone: "+91 - 840 194 8827",
+    "612, Rhythm Plaza, Amar Jawan Cir, Nikol, Ahmedabad, Gujarat 382350",
+  phone: "+91 - 076228 11355",
   email: "info@Simabanic.com",
   footerLinks: [
-    { linkName: "Data Analytics" },
-    { linkName: "Data Engineering" },
-    { linkName: "ML And AI Solutions" },
-    { linkName: "Product Engineering" },
-    { linkName: "Cloud Data Migration" },
-    { linkName: "RPA Services" },
-    { linkName: "Database Services" },
+    { linkName: "Product Engineering", hash: "/service/product-engineering" },
+    { linkName: "Performance Engineering", hash: "/performance-engineering" },
+    { linkName: "Digital Experience", hash: "/service/digital-experience" },
+    {
+      linkName: "Application Modernisation",
+      hash: "/service/application-modernisation",
+    },
+    { linkName: "Cloud Engineering", hash: "/service/cloud-modernisation" },
+    { linkName: "Quality Engineering", hash: "/service/quality-modernisation" },
   ],
   companyInfo: [
-    { pages: "About Us" },
-    { pages: "Services" },
-    { pages: "Our Work" },
-    { pages: "Technologies" },
-    { pages: "Blogs" },
-    { pages: "Careers" },
-    { pages: "Contact Us" },
+    { pages: "About Us", hash: "/about-us" },
+    { pages: "Contact Us", hash: "/contact-us" },
   ],
-  siteLinks: [
-    { links: "Sitemap" },
-    { links: "Terms of Use" },
-    { links: "Privacy Policy" },
-  ],
+  siteLinks: [{ links: "Sitemap" }],
 };

@@ -6,8 +6,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Service() {
-  const pathname = usePathname();
+  const pathname: string = usePathname();
   console.log(pathname);
+
   return (
     <>
       {pathname === "/" && (
@@ -33,7 +34,7 @@ export default function Service() {
                     {service.description}
                   </p>
                   <Link
-                    href="/"
+                    href={service.url}
                     className="text-white text-[14px] font-medium font-graphik"
                   >
                     Read more..

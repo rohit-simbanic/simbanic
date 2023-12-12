@@ -121,6 +121,7 @@ export const services = {
       description:
         "Building Impactful Software Products to Solve Your Unique Business Problems",
       logoUrl: require("@/public/images/services/product.svg"),
+      url: "/service/product-engineering",
     },
     {
       id: 2,
@@ -128,6 +129,7 @@ export const services = {
       description:
         "Building Impactful Software Products to Solve Your Unique Business Problems",
       logoUrl: require("@/public/images/services/performance.svg"),
+      url: "/service/performance-engineering",
     },
     {
       id: 3,
@@ -135,6 +137,7 @@ export const services = {
       description:
         "Building Impactful Software Products to Solve Your Unique Business Problems",
       logoUrl: require("@/public/images/services/digital.svg"),
+      url: "/service/digital-experience",
     },
     {
       id: 4,
@@ -142,6 +145,7 @@ export const services = {
       description:
         "Building Impactful Software Products to Solve Your Unique Business Problems",
       logoUrl: require("@/public/images/services/application.svg"),
+      url: "/service/application-modernisation",
     },
     {
       id: 5,
@@ -149,6 +153,7 @@ export const services = {
       description:
         "Building Impactful Software Products to Solve Your Unique Business Problems",
       logoUrl: require("@/public/images/services/cloud.svg"),
+      url: "/service/cloud-engineering",
     },
     {
       id: 6,
@@ -156,6 +161,7 @@ export const services = {
       description:
         "Building Impactful Software Products to Solve Your Unique Business Problems",
       logoUrl: require("@/public/images/services/quality.svg"),
+      url: "/service/quality-engineering",
     },
   ],
   servicesProductEngItem: [

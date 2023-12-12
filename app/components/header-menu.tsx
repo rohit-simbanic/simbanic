@@ -137,7 +137,7 @@ export default function HeaderMenu() {
                   <Link
                     key={i}
                     href={link.hash}
-                    className={`p-5 xl:p-8 active text-[#1E273B] dark:text-[#C4CDE1] ${
+                    className={`p-3 xl:px-8 xl:py-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
                       link.name === "Contact us" ? "menu-button" : ""
                     }`}
                   >
@@ -145,7 +145,7 @@ export default function HeaderMenu() {
                       <span
                         className={`flex items-center ${
                           theme === "dark" ? "bg-[#EC2F79]" : "bg-[#592CBA]"
-                        }  text-white py-[18px] px-[26px] rounded-[14px] hover:scale-[1.07] transition-all`}
+                        }  text-white py-[11px] px-[26px] rounded-[14px] hover:scale-[1.07] transition-all`}
                       >
                         <MdEmail className="mr-2" />
                         Contact us

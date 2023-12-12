@@ -24,17 +24,10 @@ export const links = [
     hash: "/company",
   },
   {
-    name: "Marketplace",
-    hash: "/projects",
+    name: "Services",
+    hash: "/services",
   },
-  {
-    name: "Features",
-    hash: "/features",
-  },
-  {
-    name: "Team",
-    hash: "/team",
-  },
+
   {
     name: "Contact us",
     hash: "/contact",

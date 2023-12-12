@@ -351,7 +351,10 @@ export const footerData = {
   email: "info@Simabanic.com",
   footerLinks: [
     { linkName: "Product Engineering", hash: "/service/product-engineering" },
-    { linkName: "Performance Engineering", hash: "/performance-engineering" },
+    {
+      linkName: "Performance Engineering",
+      hash: "/service/performance-engineering",
+    },
     { linkName: "Digital Experience", hash: "/service/digital-experience" },
     {
       linkName: "Application Modernisation",

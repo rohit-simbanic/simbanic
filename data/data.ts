@@ -346,9 +346,9 @@ export const blogData = {
 
 export const footerData = {
   footerDetails:
-    "A leading data science company enabling companies to establish data-driven growth paths.",
-  phone: "+91 - 840 194 8827",
-  email: "info@Simabanic.com",
+    "612, Rhythm Plaza, Amar Jawan Cir, Nikol, Ahmedabad, Gujarat 382350",
+  phone: "+91 - 076228 11355",
+  email: "info@simabanic.com",
   footerLinks: [
     { linkName: "Data Analytics" },
     { linkName: "Data Engineering" },

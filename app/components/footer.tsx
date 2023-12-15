@@ -17,17 +17,25 @@ export default function Footer() {
             <div className="md:col-span-4 sm:col-span-6 col-span-12">
               <Link href="/" className="">
                 <Image
-                  className="h-16 sm:w-232"
+                  className="h-16 sm:w-150"
                   src={theme === "dark" ? logoDark : logoLight}
                   alt="logo"
-                  width={232}
+                  width={200}
                   height={36}
                   priority={true}
                 />
               </Link>
-              <p className="text-[16px] text-[#4C4C4] dark:text-[#E5EDFE] font-graphik font-normal my-7 w-2/3">
-                {footerData.footerDetails}
-              </p>
+              <div className="flex gap-3 my-6">
+                <Image
+                  src={require("@/public/images/footer/map.svg")}
+                  width={24}
+                  height={24}
+                  alt={""}
+                />
+                <p className="text-[16px] text-[#4C4C4] dark:text-[#E5EDFE] font-graphik font-normal my-7 w-2/3">
+                  {footerData.footerDetails}
+                </p>
+              </div>
               <div className="flex gap-3 my-6">
                 <div>
                   <Image
@@ -38,11 +46,11 @@ export default function Footer() {
                   />
                 </div>
                 <div>
-                  <p className="text-[#4C4C4C] text-[14px] font-graphik font-normal">
+                  <p className="text-[#4C4C4C] text-[14px] font-graphik font-normal dark:text-[grey]">
                     Call Us
                   </p>
                   <span className="text-[16px] text-[1A1A1A] dark:text-gray-100">
-                    {footerData.phone}
+                    <a href="tel:+91076228 11355">{footerData.phone}</a>
                   </span>
                 </div>
               </div>
@@ -56,7 +64,7 @@ export default function Footer() {
                   />
                 </div>
                 <div>
-                  <p className="text-[#4C4C4C] text-[14px] font-graphik font-normal">
+                  <p className="text-[#4C4C4C] text-[14px] font-graphik font-normal dark:text-[grey]">
                     Email Us
                   </p>
                   <span className="text-[16px] text-[1A1A1A] dark:text-gray-100">
@@ -72,8 +80,8 @@ export default function Footer() {
               {footerData.footerLinks.map((footerLink, index) => (
                 <Link
                   key={index}
+                  className="text-[#1A1A1A] text-[16px] font-graphik font-normal dark:text-[#E5EDFE] leading-9 hover:font-bold"
                   href={footerLink.hash}
-                  className="text-[#1A1A1A] text-[16px] font-graphik font-normal dark:text-[#E5EDFE] leading-9"
                 >
                   <p>{footerLink.linkName}</p>
                 </Link>
@@ -87,7 +95,7 @@ export default function Footer() {
                 <Link
                   key={index}
                   href="/"
-                  className="text-[#1A1A1A] text-[16px] font-graphik font-normal dark:text-[#E5EDFE] leading-9"
+                  className="text-[#1A1A1A] text-[16px] font-graphik font-normal dark:text-[#E5EDFE] leading-9 hover:font-bold"
                 >
                   <p>{footerLink.pages}</p>
                 </Link>
@@ -101,7 +109,7 @@ export default function Footer() {
                 <Link
                   key={index}
                   href="/"
-                  className="text-[#1A1A1A] text-[16px] font-graphik font-normal dark:text-[#E5EDFE] leading-9"
+                  className="text-[#1A1A1A] text-[16px] font-graphik font-normal dark:text-[#E5EDFE] leading-9 hover:font-bold"
                 >
                   <p>{footerLink.links}</p>
                 </Link>

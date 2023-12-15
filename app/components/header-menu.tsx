@@ -64,10 +64,10 @@ export default function HeaderMenu() {
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center justify-center ps-3">
             <Image
-              className="h-16 sm:w-232"
+              className="h-16 sm:w-150"
               src={theme === "dark" ? logoDark : logoLight}
               alt="logo"
-              width={232}
+              width={150}
               height={36}
               priority={true}
             />

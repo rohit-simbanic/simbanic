@@ -348,7 +348,7 @@ export const footerData = {
   footerDetails:
     "612, Rhythm Plaza, Amar Jawan Cir, Nikol, Ahmedabad, Gujarat 382350",
   phone: "+91 - 076228 11355",
-  email: "info@Simabanic.com",
+  email: "info@simabanic.com",
   footerLinks: [
     { linkName: "Product Engineering", hash: "/service/product-engineering" },
     {

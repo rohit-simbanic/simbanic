@@ -67,7 +67,7 @@ export default function HeaderMenu() {
               className="h-16 sm:w-150"
               src={theme === "dark" ? logoDark : logoLight}
               alt="logo"
-              width={232}
+              width={150}
               height={36}
               priority={true}
             />

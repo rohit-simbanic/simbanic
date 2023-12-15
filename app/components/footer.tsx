@@ -80,8 +80,8 @@ export default function Footer() {
               {footerData.footerLinks.map((footerLink, index) => (
                 <Link
                   key={index}
-                  href="/"
                   className="text-[#1A1A1A] text-[16px] font-graphik font-normal dark:text-[#E5EDFE] leading-9 hover:font-bold"
+                  href={footerLink.hash}
                 >
                   <p>{footerLink.linkName}</p>
                 </Link>

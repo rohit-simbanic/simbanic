@@ -9,7 +9,7 @@ import { useTheme } from "../context/theme-context";
 export default function Carousel() {
   const { theme } = useTheme();
   return (
-    <div className={`${styles.slider} dark:bg-[#0E0421]`}>
+    <div className={`${styles.slider} dark:before:bg-none dark:after:bg-none`}>
       <div
         className={`${styles["slider-before"]} ${styles["slider-edge"]}`}
       ></div>

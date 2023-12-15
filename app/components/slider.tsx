@@ -125,7 +125,7 @@ export default function Slider() {
         </div>
         <div>
           <div>
-            <h4 className="uppercase text-center font-graphik font-semibold text-[14px] mt-24 mb-9">
+            <h4 className="uppercase text-center font-graphik font-semibold text-[14px] mt-24 mb-9 dark:text-[#4A505F]">
               TRUSTED BY +250 BUSINESSEs
             </h4>
           </div>

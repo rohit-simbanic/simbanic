@@ -11,7 +11,7 @@ export default function Footer() {
   const { theme } = useTheme();
   return (
     <>
-      <section className="cta py-[80px]">
+      <section className="cta py-[40px]">
         <div className="container mx-auto px-5">
           <div className="grid lg:grid-cols-12 grid-cols-12 sm:gap-10 relative">
             <div className="md:col-span-4 sm:col-span-6 col-span-12">

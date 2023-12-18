@@ -10,7 +10,7 @@ export default function Portfolio() {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <section className="portfolio pt-[80px] bg-[#FDF8F4] relative dark:bg-[#0E0421]">
+    <section className="portfolio pt-[40px] bg-[#FDF8F4] relative dark:bg-[#0E0421]">
       <div className="container mx-auto px-5">
         {pathname === "/" && (
           <div className="w-full lg:w-[68%] mx-auto relative">

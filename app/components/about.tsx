@@ -11,7 +11,7 @@ export default function About() {
   const { theme } = useTheme();
   const pathname = usePathname();
   return (
-    <section className="about my-[80px] relative">
+    <section className="about mt-[50px] relative">
       {pathname === "/" && (
         <>
           <div className="bg-[#dbd7fb] hidden sm:block absolute top-[15rem] -z-20 left-[-35rem] h-[15rem] w-[24rem] rounded-full blur-[4rem] sm:w-[36.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394] dark:blur-[11rem]"></div>

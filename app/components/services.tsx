@@ -9,12 +9,12 @@ import { usePathname } from "next/navigation";
 export default function Services() {
   const pathname = usePathname();
   return (
-    <section className="services mt-[80px] bg-[#1B2335] relative">
+    <section className="services mt-[30px] bg-[#1B2335] relative">
       <div className="container mx-auto text-center lg:text-left">
         <p
           className={`text-[16px] ${
             pathname === "/" ? "text-[#FDB795]" : "text-[#D384FF]"
-          } font-prompt pt-28 pb-7`}
+          } font-prompt pt-12 pb-7`}
         >
           {pathname === "/"
             ? `${services.subheading}`
@@ -33,11 +33,11 @@ export default function Services() {
           )}
         </SectionHeading>
         <p
-          className="w-3/4 dark:text-[#D7D2D2] text-[#E4E4E4] leading-[150%] text-[18px] my-14 mx-auto lg:mx-0"
+          className="w-3/4 dark:text-[#D7D2D2] text-[#E4E4E4] leading-[150%] text-[18px] my-6 mx-auto lg:mx-0"
           dangerouslySetInnerHTML={{ __html: services.details }}
         />
 
-        <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 items-center relative pb-[113px] gap-2 lg:gap-14">
+        <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 items-center relative pb-[53px] gap-2 lg:gap-6">
           <Service />
         </div>
       </div>

@@ -17,7 +17,7 @@ export default function Slider() {
   const { theme } = useTheme();
 
   return (
-    <section className="slider mt-[56px] mb-[80px]">
+    <section className="slider mt-[16px] mb-[20px]">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 grid-cols-1 items-center">
           <div className="pr-0 lg:pr-7 text-center lg:text-left">

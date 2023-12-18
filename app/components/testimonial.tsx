@@ -7,7 +7,7 @@ export default function Testimonial() {
   return (
     <>
       <div className="text-center">
-        <p className="text-[16px] mt-[100px] text-[#4262B6] font-prompt mb-10">
+        <p className="text-[16px] mt-[56px] text-[#4262B6] font-prompt mb-10">
           {testimonialData.subheading}
         </p>
         <SectionHeading>

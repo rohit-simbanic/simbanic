@@ -24,7 +24,7 @@ export default function PortfolioItem() {
     <div className="text-center relative">
       <div className="bg-[#dbd7fb] absolute top-[21rem] z-0 left-[-23rem] h-[15rem] w-[24rem] rounded-full blur-[4rem] sm:w-[36.75rem] md:left-[-23rem] lg:left-[-23rem] xl:left-[-23rem] 2xl:left-[-23rem] dark:bg-[#676394] dark:blur-[11rem]"></div>
       <div className="bg-[#fbe2e3] absolute top-[36rem] z-0 left-[-12rem] h-[25.25rem] w-[25.25rem] rounded-full blur-[4rem] sm:w-[36.75rem] dark:bg-[#946263] dark:blur-[11rem]"></div>
-      <p className="text-[16px] mt-[130px] text-[#4262B6] font-prompt mb-10">
+      <p className="text-[16px] mt-[52px] text-[#4262B6] font-prompt mb-10">
         {portfolioItem.subheading}
       </p>
       <SectionHeading>

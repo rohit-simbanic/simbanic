@@ -10,7 +10,7 @@ export default function Blog() {
   const { theme } = useTheme();
   return (
     <>
-      <div className="text-center mt-[100px]">
+      <div className="text-center mt-[45px]">
         <SectionHeading>
           <span className="dark:text-[#E5EDFE]">{blogData.heading}</span>
         </SectionHeading>

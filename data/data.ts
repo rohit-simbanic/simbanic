@@ -13,6 +13,10 @@ import clickTravelDark from "@/public/images/clickTravelDark.svg";
 import hrDark from "@/public/images/hrDark.svg";
 import etoroDark from "@/public/images/etoroDark.svg";
 import contentfulDark from "@/public/images/contentfulDark.svg";
+import about from "@/public/images/menu/about.svg";
+import star from "@/public/images/menu/star.svg";
+import team from "@/public/images/menu/team.svg";
+import menuTeam from "@/public/images/discussion.png";
 
 export const links = [
   {
@@ -23,12 +27,14 @@ export const links = [
     name: "Company",
     hash: "/company",
     submenu: true,
+    img: menuTeam,
     sublinks: [
       {
         Head: "Topwear",
         sublink: [
-          { name: "About Us", link: "/about-us" },
-          { name: "Contact", link: "/contact" },
+          { name: "About Us", link: "/about-us", img: about },
+          { name: "Company Reviews", link: "/reviews", img: star },
+          { name: "Our Team", link: "/team", img: team },
         ],
       },
     ],

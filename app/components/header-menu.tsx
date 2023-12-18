@@ -12,6 +12,7 @@ import Hamburger from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaChevronUp } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
+import bigstar from "@/public/images/menu/bigstar.svg";
 
 export default function HeaderMenu() {
   const { theme } = useTheme();
@@ -60,7 +61,7 @@ export default function HeaderMenu() {
       variants={headerVariants}
       transition={headerTransition}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto relative">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center justify-center ps-3">
             <Image
@@ -140,7 +141,7 @@ export default function HeaderMenu() {
                   <Link
                     key={i}
                     href={link.hash}
-                    className={`relative group p-3 xl:px-8 xl:py-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
+                    className={`group p-3 xl:px-8 xl:py-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
                       link.name === "Contact us" ? "menu-button" : ""
                     }`}
                   >
@@ -163,18 +164,13 @@ export default function HeaderMenu() {
                           link.name === "Services") && (
                           <div>
                             <div
-                              className={`absolute top-[2.5rem] hidden group-hover:md:block hover:md:block z-50 ${
+                              className={`absolute top-[3.5rem] left-[324px] hidden group-hover:md:block hover:md:block z-50 ${
                                 link.name === "Company"
-                                  ? "w-[160px]"
+                                  ? "w-[782px]"
                                   : "w-[500px]"
                               }`}
                             >
-                              <div className="py-3">
-                                <div
-                                  className="w-4 h-4 left-3 absolute 
-                            mt-1 bg-white rotate-45"
-                                ></div>
-                              </div>
+                              <div className="py-3"></div>
                               <div
                                 className={`bg-white p-5 grid ${
                                   link.name === "Company"
@@ -183,7 +179,7 @@ export default function HeaderMenu() {
                                 }  gap-[.1rem]`}
                               >
                                 {link.sublinks.map((mysublinks, i) => (
-                                  <div key={i}>
+                                  <div key={i} className="flex gap-8">
                                     {/* <h1 className="text-lg font-semibold">
                                       {mysublinks.Head}
                                     </h1> */}
@@ -194,14 +190,51 @@ export default function HeaderMenu() {
                                       >
                                         <Link
                                           href={slink.link}
-                                          className="hover:text-primary"
+                                          className="hover:text-primary flex gap-2"
                                         >
-                                          {slink.name}
+                                          {link.name === "Company" && (
+                                            <Image
+                                              src={slink.img}
+                                              alt=""
+                                              height={20}
+                                              width={20}
+                                            />
+                                          )}
+                                          <p>{slink.name}</p>
                                         </Link>
                                       </li>
                                     ))}
                                   </div>
                                 ))}
+                                {link.name === "Company" && (
+                                  <div className="flex gap-8 items-center my-6">
+                                    <h3>
+                                      Bring Creative Ideas to
+                                      <br /> Life with Simbanic
+                                    </h3>
+
+                                    <Image src={links[1].img} alt="" />
+                                    <span className="flex items-center bg-[#592CBA]  text-white py-[11px] px-[26px] rounded-[14px] hover:scale-[1.07] transition-all">
+                                      <svg
+                                        stroke="currentColor"
+                                        fill="currentColor"
+                                        stroke-width="0"
+                                        viewBox="0 0 24 24"
+                                        className="mr-2"
+                                        height="1em"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          fill="none"
+                                          d="M0 0h24v24H0z"
+                                        ></path>
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                                      </svg>
+                                      Get in touch
+                                    </span>
+                                  </div>
+                                )}
                               </div>
                             </div>
                           </div>

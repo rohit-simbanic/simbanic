@@ -12,7 +12,7 @@ import Hamburger from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaChevronUp } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
-import bigstar from "@/public/images/menu/bigstar.svg";
+import menuTeam from "@/public/images/discussion.png";
 
 export default function HeaderMenu() {
   const { theme } = useTheme();
@@ -194,7 +194,7 @@ export default function HeaderMenu() {
                                         >
                                           {link.name === "Company" && (
                                             <Image
-                                              src={slink.img}
+                                              src={menuTeam}
                                               alt=""
                                               height={20}
                                               width={20}

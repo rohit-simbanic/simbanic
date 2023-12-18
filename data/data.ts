@@ -16,7 +16,6 @@ import contentfulDark from "@/public/images/contentfulDark.svg";
 import about from "@/public/images/menu/about.svg";
 import star from "@/public/images/menu/star.svg";
 import team from "@/public/images/menu/team.svg";
-import menuTeam from "@/public/images/discussion.png";
 
 export const links = [
   {
@@ -27,7 +26,6 @@ export const links = [
     name: "Company",
     hash: "/company",
     submenu: true,
-    img: menuTeam,
     sublinks: [
       {
         Head: "Topwear",

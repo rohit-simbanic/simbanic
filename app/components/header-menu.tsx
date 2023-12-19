@@ -13,6 +13,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaChevronUp } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import menuTeam from "@/public/images/discussion.png";
+import bigStar from "@/public/images/bigstar.svg";
+import glassdoor from "@/public/images/glassdoor.svg";
+import googleLogo from "@/public/images/google-logo.svg";
+import goodfirms from "@/public/images/goodfirms-logo-vector-1.svg";
+import clutch from "@/public/images/clutch-co-vector-logo.svg";
+import getHired from "@/public/images/get-hired-1.png";
 
 export default function HeaderMenu() {
   const { theme } = useTheme();
@@ -167,45 +173,196 @@ export default function HeaderMenu() {
                               className={`absolute top-[3.5rem] left-[324px] hidden group-hover:md:block hover:md:block z-50 ${
                                 link.name === "Company"
                                   ? "w-[782px]"
-                                  : "w-[500px]"
+                                  : "w-[782px]"
                               }`}
                             >
                               <div className="py-3"></div>
                               <div
-                                className={`bg-white p-5 grid ${
+                                className={`bg-white p-5  ${
                                   link.name === "Company"
-                                    ? "grid-cols-1"
-                                    : "grid-cols-2"
+                                    ? "grid grid-cols-1"
+                                    : "flex gap-2 justify-between items-center"
                                 }  gap-[.1rem]`}
                               >
-                                {link.sublinks.map((mysublinks, i) => (
-                                  <div key={i} className="flex gap-8">
-                                    {/* <h1 className="text-lg font-semibold">
+                                <div
+                                  className={`${
+                                    link.name === "Company" ? "" : "w-2/3"
+                                  }`}
+                                >
+                                  {link.sublinks &&
+                                    link.sublinks.map((mysublinks, i) => (
+                                      <div
+                                        key={i}
+                                        className="flex items-center justify-between"
+                                      >
+                                        {/* <h1 className="text-lg font-semibold">
                                       {mysublinks.Head}
                                     </h1> */}
-                                    {mysublinks.sublink.map((slink, i) => (
-                                      <li
-                                        className="text-sm text-gray-600 my-2.5"
-                                        key={i}
-                                      >
-                                        <Link
-                                          href={slink.link}
-                                          className="hover:text-primary flex gap-2"
-                                        >
-                                          {link.name === "Company" && (
-                                            <Image
-                                              src={menuTeam}
-                                              alt=""
-                                              height={20}
-                                              width={20}
-                                            />
+                                        <div className="flex gap-8">
+                                          {mysublinks.sublink.map(
+                                            (slink, i) => (
+                                              <li
+                                                className="text-sm text-gray-600 my-2.5"
+                                                key={i}
+                                              >
+                                                <Link
+                                                  href={slink.link}
+                                                  className="hover:text-primary flex gap-2"
+                                                >
+                                                  {link.name === "Company" ? (
+                                                    <>
+                                                      <Image
+                                                        src={slink.img}
+                                                        alt=""
+                                                        height={20}
+                                                        width={20}
+                                                      />
+                                                      <p>{slink.name}</p>
+                                                    </>
+                                                  ) : (
+                                                    <div className="">
+                                                      <div className="flex gap-1 items-center">
+                                                        <div className="flex gap-2 items-center">
+                                                          <Image
+                                                            src={slink.img}
+                                                            alt=""
+                                                            height={20}
+                                                            width={20}
+                                                          />
+                                                          {slink.cat}
+                                                        </div>
+                                                        <p className="">
+                                                          - {slink.name}
+                                                        </p>
+                                                      </div>
+                                                    </div>
+                                                  )}
+                                                </Link>
+                                              </li>
+                                            )
                                           )}
-                                          <p>{slink.name}</p>
-                                        </Link>
-                                      </li>
+                                        </div>
+
+                                        {link.name === "Company" && (
+                                          <div className="ratings border-l-[1px] pl-3">
+                                            <div className="flex items-center">
+                                              <div className="p-3">
+                                                <div className="flex gap-4 items-center pb-2">
+                                                  <Image
+                                                    src={bigStar}
+                                                    alt=""
+                                                    height={30}
+                                                    width={30}
+                                                  />
+                                                  <span>5.0</span>
+                                                </div>
+                                                <Image
+                                                  src={glassdoor}
+                                                  alt=""
+                                                  height={120}
+                                                  width={120}
+                                                />
+                                              </div>
+                                              <div className="border-l-[1px] p-3">
+                                                <div className="flex gap-4 items-center pb-2">
+                                                  <Image
+                                                    src={bigStar}
+                                                    alt=""
+                                                    height={30}
+                                                    width={30}
+                                                  />
+                                                  <span>5.0</span>
+                                                </div>
+                                                <Image
+                                                  src={googleLogo}
+                                                  alt=""
+                                                  height={120}
+                                                  width={120}
+                                                />
+                                              </div>
+                                            </div>
+                                            <div className="flex items-center border-t-[1px]">
+                                              <div className="p-3">
+                                                <div className="flex gap-4 items-center pb-2">
+                                                  <Image
+                                                    src={bigStar}
+                                                    alt=""
+                                                    height={30}
+                                                    width={30}
+                                                  />
+                                                  <span>5.0</span>
+                                                </div>
+                                                <Image
+                                                  src={goodfirms}
+                                                  alt=""
+                                                  height={120}
+                                                  width={120}
+                                                />
+                                              </div>
+                                              <div className="border-l-[1px] p-3">
+                                                <div className="flex gap-4 items-center pb-2">
+                                                  <Image
+                                                    src={bigStar}
+                                                    alt=""
+                                                    height={30}
+                                                    width={30}
+                                                  />
+                                                  <span>5.0</span>
+                                                </div>
+                                                <Image
+                                                  src={clutch}
+                                                  alt=""
+                                                  height={120}
+                                                  width={120}
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        )}
+                                      </div>
                                     ))}
+                                </div>
+                                {link.name === "Services" && (
+                                  <div className=" w-1/3 border-l-[1px] pl-3">
+                                    <div className="ratings ">
+                                      <Image src={getHired} alt="" />
+                                    </div>
+                                    <h3 className="text-center w-3/4 m-auto my-3">
+                                      Hire Dedicated Developers and Build Your
+                                      Dream Team.
+                                    </h3>
+                                    <span className="flex w-5/6 mx-auto gap-2 items-center bg-[#592CBA]  text-white py-[11px] px-[26px] rounded-[14px] hover:scale-[1.07] transition-all">
+                                      Get in touch
+                                      <svg
+                                        width="18px"
+                                        height="18px"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <g
+                                          id="SVGRepo_bgCarrier"
+                                          stroke-width="0"
+                                        ></g>
+                                        <g
+                                          id="SVGRepo_tracerCarrier"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        ></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                          {" "}
+                                          <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
+                                            fill="#ffffff"
+                                          ></path>{" "}
+                                        </g>
+                                      </svg>
+                                    </span>
                                   </div>
-                                ))}
+                                )}
+
                                 {link.name === "Company" && (
                                   <div className="flex gap-8 items-center my-6">
                                     <h3>
@@ -214,24 +371,34 @@ export default function HeaderMenu() {
                                     </h3>
 
                                     <Image src={links[1].img} alt="" />
-                                    <span className="flex items-center bg-[#592CBA]  text-white py-[11px] px-[26px] rounded-[14px] hover:scale-[1.07] transition-all">
+                                    <span className="flex gap-2 items-center bg-[#592CBA]  text-white py-[11px] px-[26px] rounded-[14px] hover:scale-[1.07] transition-all">
+                                      Get in touch
                                       <svg
-                                        stroke="currentColor"
-                                        fill="currentColor"
-                                        stroke-width="0"
+                                        width="18px"
+                                        height="18px"
                                         viewBox="0 0 24 24"
-                                        className="mr-2"
-                                        height="1em"
-                                        width="1em"
+                                        fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
                                       >
-                                        <path
-                                          fill="none"
-                                          d="M0 0h24v24H0z"
-                                        ></path>
-                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                                        <g
+                                          id="SVGRepo_bgCarrier"
+                                          stroke-width="0"
+                                        ></g>
+                                        <g
+                                          id="SVGRepo_tracerCarrier"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        ></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                          {" "}
+                                          <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
+                                            fill="#ffffff"
+                                          ></path>{" "}
+                                        </g>
                                       </svg>
-                                      Get in touch
                                     </span>
                                   </div>
                                 )}

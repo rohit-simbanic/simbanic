@@ -17,8 +17,33 @@ import about from "@/public/images/menu/about.svg";
 import star from "@/public/images/menu/star.svg";
 import team from "@/public/images/menu/team.svg";
 import menuTeam from "@/public/images/discussion.png";
+import ux from "@/public/images/services/ux.svg";
+import code from "@/public/images/services/code.svg";
+import quality from "@/public/images/services/quality.svg";
+import cart from "@/public/images/services/cart.svg";
+import backend from "@/public/images/services/backend.svg";
+import mobile from "@/public/images/services/mobile.svg";
+type SublinkItem = {
+  name: string;
+  link: string;
+  img?: any; // Make 'img' optional
+  cat?: string;
+};
 
-export const links = [
+type SublinkGroup = {
+  Head: string;
+  sublink: SublinkItem[];
+};
+
+type LinkItem = {
+  name: string;
+  hash: string;
+  submenu?: boolean;
+  img?: any;
+
+  sublinks?: SublinkGroup[];
+};
+export const links: LinkItem[] = [
   {
     name: "Home",
     hash: "/",
@@ -47,46 +72,78 @@ export const links = [
       {
         Head: "Topwear",
         sublink: [
-          { name: "Product Engineering", link: "/service/product-engineering" },
+          {
+            name: "Product Engineering",
+            link: "/service/product-engineering",
+            img: ux,
+            cat: "UX",
+          },
         ],
       },
       {
+        Head: "Topwear",
         sublink: [
           {
             name: "Performance Engineering",
             link: "/service/performance-engineering",
+            img: mobile,
+            cat: "Mobile",
           },
         ],
       },
       {
+        Head: "Topwear",
         sublink: [
           {
             name: "Application Modernisation",
             link: "/service/application-modernisation",
+            img: code,
+            cat: "Code",
           },
         ],
       },
       {
+        Head: "Topwear",
         sublink: [
-          { name: "Digital Experience", link: "/service/digital-experience" },
+          {
+            name: "Digital Experience",
+            link: "/service/digital-experience",
+            img: backend,
+            cat: "Bakcend",
+          },
         ],
       },
       {
+        Head: "Topwear",
         sublink: [
-          { name: "Cloud Engineering", link: "/service/cloud-engineering" },
+          {
+            name: "Cloud Engineering",
+            link: "/service/cloud-engineering",
+            img: cart,
+            cat: "Ecommerce",
+          },
         ],
       },
       {
+        Head: "Topwear",
         sublink: [
           {
             name: "Application Modernisation",
             link: "/service/application-modernisation",
+            img: code,
+            cat: "UX",
           },
         ],
       },
       {
+        Head: "Topwear",
         sublink: [
-          { name: "Quality Engineering", link: "/service/quality-engineering" },
+          {
+            name: "Quality Engineering",
+            link: "/service/quality-engineering",
+            img: quality,
+            cat: "Quality",
+          },
         ],
       },
     ],

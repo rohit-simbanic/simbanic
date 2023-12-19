@@ -31,7 +31,7 @@ export const links = [
   },
   {
     name: "Company",
-    hash: "/company",
+    hash: "#",
     submenu: true,
     img: menuTeam,
     sublinks: [
@@ -52,7 +52,7 @@ export const links = [
   },
   {
     name: "Services",
-    hash: "/services",
+    hash: "#",
     submenu: true,
     sublinks: [
       {

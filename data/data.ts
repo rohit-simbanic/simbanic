@@ -23,27 +23,8 @@ import quality from "@/public/images/services/quality.svg";
 import cart from "@/public/images/services/cart.svg";
 import backend from "@/public/images/services/backend.svg";
 import mobile from "@/public/images/services/mobile.svg";
-type SublinkItem = {
-  name: string;
-  link: string;
-  img?: any; // Make 'img' optional
-  cat?: string;
-};
 
-type SublinkGroup = {
-  Head: string;
-  sublink: SublinkItem[];
-};
-
-type LinkItem = {
-  name: string;
-  hash: string;
-  submenu?: boolean;
-  img?: any;
-
-  sublinks?: SublinkGroup[];
-};
-export const links: LinkItem[] = [
+export const links = [
   {
     name: "Home",
     hash: "/",
@@ -65,7 +46,7 @@ export const links: LinkItem[] = [
             cat: "Company reviews",
           },
           { name: "Our Team", link: "/team", img: team, cat: "Team" },
-        ] as SublinkItem[],
+        ],
       },
     ],
   },
@@ -83,7 +64,7 @@ export const links: LinkItem[] = [
             img: ux,
             cat: "UX",
           },
-        ] as SublinkItem[],
+        ],
       },
       {
         Head: "Topwear",
@@ -94,7 +75,7 @@ export const links: LinkItem[] = [
             img: mobile,
             cat: "Mobile",
           },
-        ] as SublinkItem[],
+        ],
       },
       {
         Head: "Topwear",
@@ -105,7 +86,7 @@ export const links: LinkItem[] = [
             img: code,
             cat: "Code",
           },
-        ] as SublinkItem[],
+        ],
       },
       {
         Head: "Topwear",
@@ -116,7 +97,7 @@ export const links: LinkItem[] = [
             img: backend,
             cat: "Bakcend",
           },
-        ] as SublinkItem[],
+        ],
       },
       {
         Head: "Topwear",
@@ -127,7 +108,7 @@ export const links: LinkItem[] = [
             img: cart,
             cat: "Ecommerce",
           },
-        ] as SublinkItem[],
+        ],
       },
       {
         Head: "Topwear",
@@ -138,7 +119,7 @@ export const links: LinkItem[] = [
             img: code,
             cat: "UX",
           },
-        ] as SublinkItem[],
+        ],
       },
       {
         Head: "Topwear",
@@ -149,7 +130,7 @@ export const links: LinkItem[] = [
             img: quality,
             cat: "Quality",
           },
-        ] as SublinkItem[],
+        ],
       },
     ],
   },

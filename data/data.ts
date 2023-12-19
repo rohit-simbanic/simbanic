@@ -65,7 +65,7 @@ export const links: LinkItem[] = [
             cat: "Company reviews",
           },
           { name: "Our Team", link: "/team", img: team, cat: "Team" },
-        ],
+        ] as SublinkItem[],
       },
     ],
   },

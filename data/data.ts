@@ -57,9 +57,14 @@ export const links: LinkItem[] = [
       {
         Head: "Topwear",
         sublink: [
-          { name: "About Us", link: "/about-us", img: about },
-          { name: "Company Reviews", link: "/reviews", img: star },
-          { name: "Our Team", link: "/team", img: team },
+          { name: "About Us", link: "/about-us", img: about, cat: "About Us" },
+          {
+            name: "Company Reviews",
+            link: "/reviews",
+            img: star,
+            cat: "Company reviews",
+          },
+          { name: "Our Team", link: "/team", img: team, cat: "Team" },
         ],
       },
     ],

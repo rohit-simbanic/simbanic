@@ -39,9 +39,9 @@ export default function About() {
           </div>
 
           <div className="about-text text-center lg:text-left">
-            {pathname === "/" && (
+            {/* {pathname === "/" && (
               <p className="text-[16px] text-[#4262B6] mb-10">About us</p>
-            )}
+            )} */}
             <SectionHeading>
               <span className="dark:text-[#E5EDFE]">
                 {pathname === "/"

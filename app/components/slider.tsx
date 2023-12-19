@@ -47,7 +47,7 @@ export default function Slider() {
             >
               Agile in Culture and Mindset.
             </motion.p>
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -102,7 +102,7 @@ export default function Slider() {
                   Loved by thousands
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="flex justify-center lg:justify-end">
             <motion.div

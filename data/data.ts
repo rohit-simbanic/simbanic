@@ -83,7 +83,7 @@ export const links: LinkItem[] = [
             img: ux,
             cat: "UX",
           },
-        ],
+        ] as SublinkItem[],
       },
       {
         Head: "Topwear",
@@ -94,7 +94,7 @@ export const links: LinkItem[] = [
             img: mobile,
             cat: "Mobile",
           },
-        ],
+        ] as SublinkItem[],
       },
       {
         Head: "Topwear",
@@ -105,7 +105,7 @@ export const links: LinkItem[] = [
             img: code,
             cat: "Code",
           },
-        ],
+        ] as SublinkItem[],
       },
       {
         Head: "Topwear",
@@ -116,7 +116,7 @@ export const links: LinkItem[] = [
             img: backend,
             cat: "Bakcend",
           },
-        ],
+        ] as SublinkItem[],
       },
       {
         Head: "Topwear",
@@ -127,7 +127,7 @@ export const links: LinkItem[] = [
             img: cart,
             cat: "Ecommerce",
           },
-        ],
+        ] as SublinkItem[],
       },
       {
         Head: "Topwear",
@@ -138,7 +138,7 @@ export const links: LinkItem[] = [
             img: code,
             cat: "UX",
           },
-        ],
+        ] as SublinkItem[],
       },
       {
         Head: "Topwear",
@@ -149,7 +149,7 @@ export const links: LinkItem[] = [
             img: quality,
             cat: "Quality",
           },
-        ],
+        ] as SublinkItem[],
       },
     ],
   },

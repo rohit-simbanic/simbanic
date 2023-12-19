@@ -16,9 +16,7 @@ export default function Services() {
             pathname === "/" ? "text-[#FDB795]" : "text-[#D384FF]"
           } font-prompt pt-12 pb-7`}
         >
-          {pathname === "/"
-            ? `${services.subheading}`
-            : `${services.subheadingServices}`}
+          {pathname === "/" ? `` : `${services.subheadingServices}`}
         </p>
         <SectionHeading>
           {pathname === "/" ? (

@@ -51,7 +51,7 @@ export default function Blog() {
         ))}
       </div>
       <Link
-        href="/"
+        href="/blogs"
         className="flex justify-center py-16 active text-[#1E273B] dark:text-[#C4CDE1]"
       >
         <span

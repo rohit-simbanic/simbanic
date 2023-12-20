@@ -146,7 +146,9 @@ export default function HeaderMenu() {
                 {links.map((link, i) => (
                   <Link
                     key={i}
-                    href={link.hash}
+                    href={
+                      link.name === "Contact us" ? "#contact" : `${link.hash}`
+                    }
                     className={`group p-3 xl:px-8 xl:py-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
                       link.name === "Contact us" ? "menu-button" : ""
                     }`}

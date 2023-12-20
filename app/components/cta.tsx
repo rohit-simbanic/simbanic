@@ -8,7 +8,7 @@ export default function CTA() {
   const { theme } = useTheme();
   return (
     <>
-      <section className="cta py-[80px] overlay__cta">
+      <section className="cta py-[80px] overlay__cta" id="contact">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-12 grid-cols-12 sm:gap-10 items-center relative">
             <div className="lg:col-span-6 md:col-span-6"></div>

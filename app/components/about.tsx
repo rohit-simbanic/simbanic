@@ -67,7 +67,7 @@ export default function About() {
               </p>
             )}
             <Link
-              href="/"
+              href="#contact"
               className="block py-8 active text-[#1E273B] dark:text-[#C4CDE1]"
             >
               <span

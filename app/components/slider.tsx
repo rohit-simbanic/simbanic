@@ -31,7 +31,7 @@ export default function Slider() {
                 <span className="dark:text-[#E5EDFE]">
                   Empowering <br />
                   Business{" "}
-                  <span className="text-[#FFCCB2] dark:text-[#A65CFF]">
+                  <span className="text-[#e40059] dark:text-[#A65CFF]">
                     With
                   </span>{" "}
                   <br />

@@ -9,8 +9,8 @@ export default function Copyright() {
             <p className="text-[#4C4C4C] text-[14px] font-graphik font-normal dark:text-gray-100">
               © 2023 Simbanic. All Rights Reserved.
             </p>
-            <div className="flex gap-9">
-              <div className="bg-[#F4F4F4] p-2 rounded-full">
+            <div className="flex gap-[.5rem]">
+              <div className="bg-[#F4F4F4] p-2 rounded-full cursor-pointer">
                 <Image
                   src={require("@/public/images/footer/linkedin.svg")}
                   width={24}
@@ -18,7 +18,7 @@ export default function Copyright() {
                   alt={""}
                 />
               </div>
-              <div className="bg-[#F4F4F4] p-2 rounded-full">
+              <div className="bg-[#F4F4F4] p-2 rounded-full cursor-pointer">
                 <Image
                   src={require("@/public/images/footer/insta.svg")}
                   width={24}
@@ -26,7 +26,7 @@ export default function Copyright() {
                   alt={""}
                 />
               </div>
-              <div className="bg-[#F4F4F4] p-2 rounded-full">
+              <div className="bg-[#F4F4F4] p-2 rounded-full cursor-pointer">
                 <Image
                   src={require("@/public/images/footer/facebook.svg")}
                   width={24}

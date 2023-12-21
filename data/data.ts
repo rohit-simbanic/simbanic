@@ -227,7 +227,7 @@ export const services = {
       id: 2,
       name: "Performance Engineering",
       description:
-        "Building Impactful Software Products to Solve Your Unique Business Problems",
+        "Building High Performance Solutions for Extreme Load Conditions",
       logoUrl: require("@/public/images/services/performance.svg"),
       url: "/service/performance-engineering",
     },
@@ -235,7 +235,7 @@ export const services = {
       id: 3,
       name: "Digital Experience",
       description:
-        "Building Impactful Software Products to Solve Your Unique Business Problems",
+        "Foster Positive Brand Identity with Immersive Customer Experiences and Pleasant Interactions",
       logoUrl: require("@/public/images/services/digital.svg"),
       url: "/service/digital-experience",
     },
@@ -243,7 +243,7 @@ export const services = {
       id: 4,
       name: "Application Modernisation",
       description:
-        "Building Impactful Software Products to Solve Your Unique Business Problems",
+        "Future-Proof Your Application with Improved Tech Stack, Code, and Closb Infrastructure",
       logoUrl: require("@/public/images/services/application.svg"),
       url: "/service/application-modernisation",
     },
@@ -251,7 +251,7 @@ export const services = {
       id: 5,
       name: "Cloud Engineering ",
       description:
-        "Building Impactful Software Products to Solve Your Unique Business Problems",
+        "Unlock Business Agility and Flexibility with Cloud Scalability and Data Security",
       logoUrl: require("@/public/images/services/cloud.svg"),
       url: "/service/cloud-engineering",
     },
@@ -259,7 +259,7 @@ export const services = {
       id: 6,
       name: "Quality Engineering",
       description:
-        "Building Impactful Software Products to Solve Your Unique Business Problems",
+        "Enabling Excellence in Robust Digital Product Development with Total Quality Management Processes and Tools",
       logoUrl: require("@/public/images/services/quality.svg"),
       url: "/service/quality-engineering",
     },
@@ -397,7 +397,7 @@ export const footerData = {
   footerDetails:
     "612, Rhythm Plaza, Amar Jawan Cir, Nikol, Ahmedabad, Gujarat 382350",
   phone: "+91 - 076228 11355",
-  email: "info@simabanic.com",
+  email: "info@simbanic.com",
   footerLinks: [
     { linkName: "Product Engineering", hash: "/service/product-engineering" },
     {
@@ -406,15 +406,15 @@ export const footerData = {
     },
     { linkName: "Digital Experience", hash: "/service/digital-experience" },
     {
-      linkName: "Application Modernisation",
+      linkName: "Application Modernization",
       hash: "/service/application-modernisation",
     },
-    { linkName: "Cloud Engineering", hash: "/service/cloud-modernisation" },
-    { linkName: "Quality Engineering", hash: "/service/quality-modernisation" },
+    { linkName: "Cloud Engineering", hash: "/service/cloud-engineering" },
+    { linkName: "Quality Engineering", hash: "/service/quality-engineering" },
   ],
   companyInfo: [
-    { pages: "About Us", hash: "/about-us" },
-    { pages: "Contact Us", hash: "/contact-us" },
+    { pages: "About Us", hash: "/" },
+    { pages: "Contact Us", hash: "/#contact" },
   ],
   siteLinks: [{ links: "Sitemap" }],
 };

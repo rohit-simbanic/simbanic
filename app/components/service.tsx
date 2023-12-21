@@ -4,10 +4,15 @@ import { services } from "@/data/data";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import rectangle from "@/public/images/services/rectangle.svg";
 
 export default function Service() {
   const pathname: string = usePathname();
   console.log(pathname);
+  const truncateDescription = (description: string) => {
+    const words = description.split(" ");
+    return words.slice(0, 7).join(" ");
+  };
 
   return (
     <>
@@ -31,12 +36,16 @@ export default function Service() {
                     {service.name}
                   </h3>
                   <p className="text-[14px] text-[#748CA3] w-3/4 my-5 font-prompt font-light leading-[134%] dark:text-gray-400">
-                    {service.description}
+                    {truncateDescription(service.description)}{" "}
+                    {service.description.split(" ").length > 6 ? "..." : ""}
                   </p>
                   <Link
                     href={service.url}
-                    className="text-white text-[14px] font-medium font-graphik"
+                    className="text-white text-[14px] font-medium font-graphik group-hover:text-[#e40059] group-hover:dark:text-[#A65CFF] relative"
                   >
+                    <span className="hidden group-hover:inline-block absolute top-0 left-[-24px]">
+                      <Image src={rectangle} alt="" className="w-4 h-4 mr-2" />
+                    </span>
                     Read more..
                   </Link>
                 </div>

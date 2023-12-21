@@ -10,19 +10,14 @@ import { links } from "@/data/data";
 import { MdEmail } from "react-icons/md";
 import Hamburger from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaChevronUp } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
-import menuTeam from "@/public/images/discussion.png";
-import bigStar from "@/public/images/bigstar.svg";
-import glassdoor from "@/public/images/glassdoor.svg";
-import googleLogo from "@/public/images/google-logo.svg";
-import goodfirms from "@/public/images/goodfirms-logo-vector-1.svg";
-import clutch from "@/public/images/clutch-co-vector-logo.svg";
 import getHired from "@/public/images/get-hired-1.png";
+import { usePathname } from "next/navigation";
 
 export default function HeaderMenu() {
   const { theme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -67,7 +62,7 @@ export default function HeaderMenu() {
       variants={headerVariants}
       transition={headerTransition}
     >
-      <div className="container mx-auto relative">
+      <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center justify-center ps-3">
             <Image
@@ -107,7 +102,7 @@ export default function HeaderMenu() {
                     <li key={i}>
                       <Link
                         href={link.hash}
-                        className={`block p-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
+                        className={`block group p-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
                           link.name === "Contact us" ? "menu-button" : ""
                         }`}
                       >
@@ -121,7 +116,78 @@ export default function HeaderMenu() {
                             Contact us
                           </span>
                         ) : (
-                          <span>{link.name}</span>
+                          <>
+                            <div className="flex gap-2 items-center">
+                              <span>{link.name}</span>
+                              {(link.name === "Company" ||
+                                link.name === "Services") && <FaChevronDown />}
+                            </div>
+                            {(link.name === "Company" ||
+                              link.name === "Services") && (
+                              <div
+                                className={`relative top-[0] ${
+                                  link.name === "Company"
+                                    ? "right-[0px]"
+                                    : "left-[0px]"
+                                } hidden group-hover:md:block  transition-all duration-500 ease-in-out z-50 ${
+                                  link.name === "Company"
+                                    ? "w-[full]"
+                                    : "w-[full]"
+                                }`}
+                              >
+                                <div
+                                  className={`bg-white py-2 px-5 rounded-md  ${
+                                    link.name === "Company"
+                                      ? "grid grid-cols-1"
+                                      : "flex gap-2 justify-between items-center"
+                                  }  gap-[.1rem]`}
+                                >
+                                  <div
+                                    className={`${
+                                      link.name === "Company" ? "" : ""
+                                    }`}
+                                  >
+                                    {link.sublinks &&
+                                      link.sublinks.map((mysublinks, i) => (
+                                        <div key={i}>
+                                          {/* <h1 className="text-lg font-semibold">
+                                      {mysublinks.Head}
+                                    </h1> */}
+
+                                          {mysublinks.sublink.map(
+                                            (slink, i) => (
+                                              <li
+                                                className="text-sm text-gray-600 my-5"
+                                                key={i}
+                                              >
+                                                <Link
+                                                  href={slink.link}
+                                                  className="hover:text-primary flex gap-2"
+                                                >
+                                                  {link.name === "Company" ? (
+                                                    <>
+                                                      <p>{slink.name}</p>
+                                                    </>
+                                                  ) : (
+                                                    <div className="">
+                                                      <div className="flex gap-1 items-center">
+                                                        <p className="">
+                                                          {slink.name}
+                                                        </p>
+                                                      </div>
+                                                    </div>
+                                                  )}
+                                                </Link>
+                                              </li>
+                                            )
+                                          )}
+                                        </div>
+                                      ))}
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                          </>
                         )}
                       </Link>
                     </li>
@@ -142,14 +208,18 @@ export default function HeaderMenu() {
             }}
           >
             <nav className="font-semibold text-base lg:text-lg">
-              <ul className="mx-auto flex items-center ">
+              <ul className="mx-auto flex items-center gap-3">
                 {links.map((link, i) => (
                   <Link
                     key={i}
                     href={
                       link.name === "Contact us" ? "#contact" : `${link.hash}`
                     }
-                    className={`group p-3 xl:px-8 xl:py-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
+                    className={`${
+                      link.name === "Company" || link.name === "Services"
+                        ? "group"
+                        : ""
+                    } p-3 xl:px-8 xl:py-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
                       link.name === "Contact us" ? "menu-button" : ""
                     }`}
                   >
@@ -163,7 +233,7 @@ export default function HeaderMenu() {
                         Contact us
                       </span>
                     ) : link.name === "Company" || link.name === "Services" ? (
-                      <div className="">
+                      <div className={`relative `}>
                         <span className="flex items-center gap-2">
                           {link.name}
                           <FaChevronDown />
@@ -172,15 +242,18 @@ export default function HeaderMenu() {
                           link.name === "Services") && (
                           <div>
                             <div
-                              className={`absolute top-[3.5rem] left-[324px] hidden group-hover:md:block hover:md:block z-50 ${
+                              className={`absolute top-[3.5rem] ${
                                 link.name === "Company"
-                                  ? "w-[782px]"
-                                  : "w-[782px]"
+                                  ? "right-[0px]"
+                                  : "left-[0px]"
+                              } mt-[-390px]  group-hover:mt-[0px] opacity-0 group-hover:md:opacity-100  transition-all duration-500 ease-in-out z-50 ${
+                                link.name === "Company"
+                                  ? "w-[249px]"
+                                  : "w-[261px]"
                               }`}
                             >
-                              <div className="py-3"></div>
                               <div
-                                className={`bg-white p-5  ${
+                                className={`bg-white p-5 rounded-md  ${
                                   link.name === "Company"
                                     ? "grid grid-cols-1"
                                     : "flex gap-2 justify-between items-center"
@@ -188,229 +261,51 @@ export default function HeaderMenu() {
                               >
                                 <div
                                   className={`${
-                                    link.name === "Company" ? "" : "w-2/3"
+                                    link.name === "Company" ? "" : ""
                                   }`}
                                 >
                                   {link.sublinks &&
                                     link.sublinks.map((mysublinks, i) => (
-                                      <div
-                                        key={i}
-                                        className="flex items-center justify-between"
-                                      >
+                                      <div key={i}>
                                         {/* <h1 className="text-lg font-semibold">
                                       {mysublinks.Head}
                                     </h1> */}
-                                        <div className="flex gap-8">
-                                          {mysublinks.sublink.map(
-                                            (slink, i) => (
-                                              <li
-                                                className="text-sm text-gray-600 my-2.5"
-                                                key={i}
-                                              >
-                                                <Link
-                                                  href={slink.link}
-                                                  className="hover:text-primary flex gap-2"
-                                                >
-                                                  {link.name === "Company" ? (
-                                                    <>
-                                                      <Image
-                                                        src={slink.img}
-                                                        alt=""
-                                                        height={20}
-                                                        width={20}
-                                                      />
-                                                      <p>{slink.name}</p>
-                                                    </>
-                                                  ) : (
-                                                    <div className="">
-                                                      <div className="flex gap-1 items-center">
-                                                        <div className="flex gap-2 items-center">
-                                                          <Image
-                                                            src={slink.img}
-                                                            alt=""
-                                                            height={20}
-                                                            width={20}
-                                                          />
-                                                          {slink.cat}
-                                                        </div>
-                                                        <p className="">
-                                                          - {slink.name}
-                                                        </p>
-                                                      </div>
-                                                    </div>
-                                                  )}
-                                                </Link>
-                                              </li>
-                                            )
-                                          )}
-                                        </div>
 
-                                        {link.name === "Company" && (
-                                          <div className="ratings border-l-[1px] pl-3">
-                                            <div className="flex items-center">
-                                              <div className="p-3">
-                                                <div className="flex gap-4 items-center pb-2">
-                                                  <Image
-                                                    src={bigStar}
-                                                    alt=""
-                                                    height={30}
-                                                    width={30}
-                                                  />
-                                                  <span>5.0</span>
+                                        {mysublinks.sublink.map((slink, i) => (
+                                          <li
+                                            className="text-sm text-gray-600 my-5"
+                                            key={i}
+                                          >
+                                            <Link
+                                              href={slink.link}
+                                              className="hover:text-primary flex gap-2"
+                                            >
+                                              {link.name === "Company" ? (
+                                                <>
+                                                  <p>{slink.name}</p>
+                                                </>
+                                              ) : (
+                                                <div className="">
+                                                  <div className="flex gap-1 items-center">
+                                                    <p className="">
+                                                      {slink.name}
+                                                    </p>
+                                                  </div>
                                                 </div>
-                                                <Image
-                                                  src={glassdoor}
-                                                  alt=""
-                                                  height={120}
-                                                  width={120}
-                                                />
-                                              </div>
-                                              <div className="border-l-[1px] p-3">
-                                                <div className="flex gap-4 items-center pb-2">
-                                                  <Image
-                                                    src={bigStar}
-                                                    alt=""
-                                                    height={30}
-                                                    width={30}
-                                                  />
-                                                  <span>5.0</span>
-                                                </div>
-                                                <Image
-                                                  src={googleLogo}
-                                                  alt=""
-                                                  height={120}
-                                                  width={120}
-                                                />
-                                              </div>
-                                            </div>
-                                            <div className="flex items-center border-t-[1px]">
-                                              <div className="p-3">
-                                                <div className="flex gap-4 items-center pb-2">
-                                                  <Image
-                                                    src={bigStar}
-                                                    alt=""
-                                                    height={30}
-                                                    width={30}
-                                                  />
-                                                  <span>5.0</span>
-                                                </div>
-                                                <Image
-                                                  src={goodfirms}
-                                                  alt=""
-                                                  height={120}
-                                                  width={120}
-                                                />
-                                              </div>
-                                              <div className="border-l-[1px] p-3">
-                                                <div className="flex gap-4 items-center pb-2">
-                                                  <Image
-                                                    src={bigStar}
-                                                    alt=""
-                                                    height={30}
-                                                    width={30}
-                                                  />
-                                                  <span>5.0</span>
-                                                </div>
-                                                <Image
-                                                  src={clutch}
-                                                  alt=""
-                                                  height={120}
-                                                  width={120}
-                                                />
-                                              </div>
-                                            </div>
-                                          </div>
-                                        )}
+                                              )}
+                                            </Link>
+                                          </li>
+                                        ))}
                                       </div>
                                     ))}
                                 </div>
-                                {link.name === "Services" && (
-                                  <div className=" w-1/3 border-l-[1px] pl-3">
-                                    <div className="ratings ">
-                                      <Image src={getHired} alt="" />
-                                    </div>
-                                    <h3 className="text-center w-3/4 m-auto my-3">
-                                      Hire Dedicated Developers and Build Your
-                                      Dream Team.
-                                    </h3>
-                                    <span className="flex w-5/6 mx-auto gap-2 items-center bg-[#592CBA]  text-white py-[11px] px-[26px] rounded-[14px] hover:scale-[1.07] transition-all">
-                                      Get in touch
-                                      <svg
-                                        width="18px"
-                                        height="18px"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <g
-                                          id="SVGRepo_bgCarrier"
-                                          stroke-width="0"
-                                        ></g>
-                                        <g
-                                          id="SVGRepo_tracerCarrier"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                        ></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                          {" "}
-                                          <path
-                                            fill-rule="evenodd"
-                                            clip-rule="evenodd"
-                                            d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
-                                            fill="#ffffff"
-                                          ></path>{" "}
-                                        </g>
-                                      </svg>
-                                    </span>
-                                  </div>
-                                )}
-
-                                {link.name === "Company" && (
-                                  <div className="flex gap-8 items-center my-6">
-                                    <h3>
-                                      Bring Creative Ideas to
-                                      <br /> Life with Simbanic
-                                    </h3>
-
-                                    <Image src={links[1].img} alt="" />
-                                    <span className="flex gap-2 items-center bg-[#592CBA]  text-white py-[11px] px-[26px] rounded-[14px] hover:scale-[1.07] transition-all">
-                                      Get in touch
-                                      <svg
-                                        width="18px"
-                                        height="18px"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <g
-                                          id="SVGRepo_bgCarrier"
-                                          stroke-width="0"
-                                        ></g>
-                                        <g
-                                          id="SVGRepo_tracerCarrier"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                        ></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                          {" "}
-                                          <path
-                                            fill-rule="evenodd"
-                                            clip-rule="evenodd"
-                                            d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
-                                            fill="#ffffff"
-                                          ></path>{" "}
-                                        </g>
-                                      </svg>
-                                    </span>
-                                  </div>
-                                )}
                               </div>
                             </div>
                           </div>
                         )}
                       </div>
                     ) : (
-                      <span>{link.name}</span>
+                      <span>{pathname != "/" && link.name}</span>
                     )}
                   </Link>
                 ))}

@@ -213,7 +213,7 @@ export default function HeaderMenu() {
                   <Link
                     key={i}
                     href={
-                      link.name === "Contact us" ? "#contact" : `${link.hash}`
+                      link.name === "Contact us" ? "/contact" : `${link.hash}`
                     }
                     className={`${
                       link.name === "Company" || link.name === "Services"

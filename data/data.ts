@@ -41,7 +41,7 @@ export const links = [
           { name: "About Us", link: "/", img: about, cat: "About Us" },
           {
             name: "Contact Us",
-            link: "/",
+            link: "/contact",
             img: star,
             cat: "Company reviews",
           },
@@ -413,7 +413,7 @@ export const footerData = {
   ],
   companyInfo: [
     { pages: "About Us", hash: "/" },
-    { pages: "Contact Us", hash: "/#contact" },
+    { pages: "Contact Us", hash: "/contact" },
   ],
   siteLinks: [{ links: "Sitemap" }],
 };

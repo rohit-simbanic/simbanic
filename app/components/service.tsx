@@ -19,38 +19,38 @@ export default function Service() {
       {pathname === "/" && (
         <>
           {services.servicesItem.map((service, i) => (
-            <div
-              className="w-full px-4 py-6 group transition-transform transform hover:scale-105 cursor-pointer"
-              key={service.id}
-            >
-              <div className="relative flex flex-col sm:flex-row gap-[18px] items-start group-hover:bg-[#0000001a] group-hover:bg-opacity-[0.1] group-hover:rounded-lg p-4 text-left">
-                <Image
-                  src={service.logoUrl}
-                  alt={service.name}
-                  width={70}
-                  height={70}
-                />
+            <Link href={service.url} key={service.id}>
+              <div className="w-full px-4 py-6 group transition-transform transform hover:scale-105 cursor-pointer">
+                <div className="relative flex flex-col sm:flex-row gap-[18px] items-start group-hover:bg-[#0000001a] group-hover:bg-opacity-[0.1] group-hover:rounded-lg p-4 text-left">
+                  <Image
+                    src={service.logoUrl}
+                    alt={service.name}
+                    width={70}
+                    height={70}
+                  />
 
-                <div>
-                  <h3 className="text-[25px] font-medium text-white leading-[134%] w-6 font-graphik dark:text-gray-100">
-                    {service.name}
-                  </h3>
-                  <p className="text-[14px] text-[#748CA3] w-3/4 my-5 font-prompt font-light leading-[134%] dark:text-gray-400">
-                    {truncateDescription(service.description)}{" "}
-                    {service.description.split(" ").length > 6 ? "..." : ""}
-                  </p>
-                  <Link
-                    href={service.url}
-                    className="text-white text-[14px] font-medium font-graphik group-hover:text-[#e40059] group-hover:dark:text-[#A65CFF] relative"
-                  >
-                    <span className="hidden group-hover:inline-block absolute top-0 left-[-24px]">
-                      <Image src={rectangle} alt="" className="w-4 h-4 mr-2" />
-                    </span>
-                    Read more..
-                  </Link>
+                  <div>
+                    <h3 className="text-[25px] font-medium text-white leading-[134%] w-6 font-graphik dark:text-gray-100">
+                      {service.name}
+                    </h3>
+                    <p className="text-[14px] text-[#748CA3] w-3/4 my-5 font-prompt font-light leading-[134%] dark:text-gray-400">
+                      {truncateDescription(service.description)}{" "}
+                      {service.description.split(" ").length > 6 ? "..." : ""}
+                    </p>
+                    <div className="text-white text-[14px] font-medium font-graphik group-hover:text-[#e40059] group-hover:dark:text-[#A65CFF] relative">
+                      <span className="hidden group-hover:inline-block absolute top-0 left-[-24px]">
+                        <Image
+                          src={rectangle}
+                          alt=""
+                          className="w-4 h-4 mr-2"
+                        />
+                      </span>
+                      Read more..
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </>
       )}

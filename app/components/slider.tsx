@@ -18,7 +18,7 @@ export default function Slider() {
 
   return (
     <section className="slider mt-[16px] mb-[20px]">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-5">
         <div className="grid lg:grid-cols-2 grid-cols-1 items-center">
           <div className="pr-0 lg:pr-7 text-center lg:text-left">
             <motion.div
@@ -117,7 +117,7 @@ export default function Slider() {
             >
               <Image
                 src={require("@/public/images/working_man.svg")}
-                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+                className="w-[100%] lg:w-[100%] pr-[2rem] sm:pr-0 lg:pr-[5.5rem]"
                 alt={""}
               />
             </motion.div>

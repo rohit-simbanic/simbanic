@@ -11,7 +11,7 @@ export default function SectionHeading({ children }: SectionHeadingProps) {
     <h2
       className={`text-[45px]
       font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] ${
-        pathname === "/" ? "px-5" : ""
+        pathname === "/" ? "sm:px-0 px-5" : ""
       }`}
     >
       {children}

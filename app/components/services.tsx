@@ -10,7 +10,7 @@ export default function Services() {
   const pathname = usePathname();
   return (
     <section className="services mt-[30px] bg-[#1B2335] relative">
-      <div className="container mx-auto text-center lg:text-left">
+      <div className="container mx-auto text-center lg:text-left sm:px-5 px-0">
         <p
           className={`text-[16px] ${
             pathname === "/" ? "text-[#FDB795]" : "text-[#D384FF]"
@@ -21,7 +21,7 @@ export default function Services() {
         <SectionHeading>
           {pathname === "/" ? (
             <span
-              className="text-white text-[40px] leading-[134%]"
+              className="text-white text-[40px] leading-[134%] px-5 md:px-0"
               dangerouslySetInnerHTML={{ __html: services.heading }}
             />
           ) : (

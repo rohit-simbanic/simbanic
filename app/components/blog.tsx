@@ -20,7 +20,7 @@ export default function Blog() {
           <div key={index}>
             <Image src={item.blogImage} className="w-full" alt={""} />
             <div className="flex flex-row justify-between items-center mt-4">
-              <span className="text-[16px] font-medium text-[#0E61B3] uppercase border border-solid border-[#C9C9C9] rounded-full py-4 px-8">
+              <span className="text-[13px] sm:text-[16px] font-medium text-[#0E61B3] uppercase border border-solid border-[#C9C9C9] rounded-full py-4 px-8">
                 {item.tag}
               </span>
               <p className="text-[16px] text-[#3F4249] font-medium dark:text-[#4A505F]">

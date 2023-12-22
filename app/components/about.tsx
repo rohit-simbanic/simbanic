@@ -25,7 +25,7 @@ export default function About() {
               {pathname === "/" ? (
                 <Image
                   src={require("@/public/images/marketingStrategy.svg")}
-                  className="w-[100%] lg:w-[80%] "
+                  className="w-[100%] lg:w-[80%] pl-7 lg:pl-0"
                   alt={""}
                 />
               ) : (

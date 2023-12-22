@@ -74,7 +74,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="md:col-span-3 sm:col-span-6 col-span-12">
-              <h4 className="text-[#1A1A1A] font-semibold font-graphik text-[24px] dark:text-white mb-5">
+              <h4 className="text-[#1A1A1A] font-semibold font-graphik text-[24px] dark:text-white mb-3 sm:mb-5 mt-6 sm:mt-0">
                 Services
               </h4>
               {footerData.footerLinks.map((footerLink, index) => (
@@ -88,7 +88,7 @@ export default function Footer() {
               ))}
             </div>
             <div className="md:col-span-3 sm:col-span-6 col-span-12">
-              <h4 className="text-[#1A1A1A] font-semibold font-graphik text-[24px] dark:text-white mb-5">
+              <h4 className="text-[#1A1A1A] font-semibold font-graphik text-[24px] dark:text-white mb-3 sm:mb-5 mt-6 sm:mt-0">
                 Company
               </h4>
               {footerData.companyInfo.map((footerLink, index) => (
@@ -106,7 +106,7 @@ export default function Footer() {
               ))}
             </div>
             <div className="md:col-span-2 sm:col-span-6 col-span-12">
-              <h4 className="text-[#1A1A1A] font-semibold font-graphik text-[24px] dark:text-white mb-5">
+              <h4 className="text-[#1A1A1A] font-semibold font-graphik text-[24px] dark:text-white mb-3 sm:mb-5 mt-6 sm:mt-0">
                 Quick Links
               </h4>
               {footerData.siteLinks.map((footerLink, index) => (

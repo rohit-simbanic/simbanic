@@ -21,7 +21,7 @@ export default function Services() {
         <SectionHeading>
           {pathname === "/" ? (
             <span
-              className="text-white text-[40px] leading-[134%] px-5 md:px-0"
+              className="text-white text-[40px] leading-[134%]"
               dangerouslySetInnerHTML={{ __html: services.heading }}
             />
           ) : (

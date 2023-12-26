@@ -133,7 +133,7 @@ export default function HeaderMenu() {
                                 className={`relative top-[0] left-0  transition-all duration-500 ease-in-out z-50 w-full}`}
                               >
                                 <div
-                                  className={`bg-white py-2 px-5 rounded-md flex gap-2 justify-between items-center`}
+                                  className={`bg-white dark:bg-opacity-5 py-2 px-5 rounded-md flex gap-2 justify-between items-center`}
                                 >
                                   <div>
                                     {link.sublinks &&

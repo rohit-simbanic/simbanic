@@ -16,7 +16,7 @@ import { Team } from "../components/Team";
 const ContactPage = () => {
   const { theme } = useTheme();
   return (
-    <section className="">
+    <section className="about-page">
       <div className="container mx-auto px-5 xl:px-0 mb-[45px]">
         <div className="text-center mt-[45px] relative pt-[53px] bg-[url('../public/images/services/productEng/slider-shadow.svg')] -z-20 bg-no-repeat bg-[center_top_0rem]">
           <SectionHeading>

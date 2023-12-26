@@ -3,7 +3,6 @@ import React from "react";
 import CompanyInfo from "./companyInfo";
 import PortfolioItem from "./portfolioItem";
 import Testimonial from "./testimonial";
-import Blog from "./blog";
 import { usePathname } from "next/navigation";
 
 export default function Portfolio() {
@@ -11,7 +10,7 @@ export default function Portfolio() {
   console.log(pathname);
   return (
     <section className="portfolio pt-[40px] bg-[#FDF8F4] relative dark:bg-[#0E0421]">
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-5 pb-5">
         {pathname === "/" && (
           <div className="w-full lg:w-[68%] mx-auto relative">
             <div className="bg-[#dbd7fb] absolute top-[0rem] hidden 3xl:block z-0 right-[-13rem] h-[15rem] w-[24rem] rounded-full blur-[4rem] sm:w-[36.75rem] md:right-[-13rem] lg:right-[-13rem] xl:right-[-13rem] 2xl:right-[-13rem] dark:bg-[#676394] dark:blur-[11rem]"></div>
@@ -23,7 +22,6 @@ export default function Portfolio() {
         )}
         <PortfolioItem />
         <Testimonial />
-        <Blog />
       </div>
     </section>
   );

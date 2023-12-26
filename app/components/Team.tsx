@@ -3,7 +3,7 @@ import SectionHeading from "./section-heading";
 
 export const Team = () => {
   return (
-    <div className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10 pt-[53px] bg-[url('../public/images/services/productEng/slider-shadow.svg')] bg-no-repeat bg-[center_top_0rem]">
+    <div className="px-4 min-lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10 ">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <SectionHeading>
           <span className="dark:text-[#E5EDFE]">meet our experts</span>
@@ -63,7 +63,7 @@ export const Team = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10">
+        <div className="lg:mt-10">
           <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
             <Image
               className="object-cover w-full h-56 md:h-64 xl:h-[17rem]"
@@ -169,7 +169,7 @@ export const Team = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10">
+        <div className="lg:mt-10">
           <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
             <Image
               className="object-cover w-full h-56 md:h-64 xl:h-[17rem]"

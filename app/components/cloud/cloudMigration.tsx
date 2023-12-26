@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function CloudMigration() {
   return (
     <section className="cloudconsulting mt-[80px] relative">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-5">
         <div className="grid grid-cols-1 items-center">
           <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[35px] text-center">
             <span className="dark:text-[#E5EDFE] text-center">

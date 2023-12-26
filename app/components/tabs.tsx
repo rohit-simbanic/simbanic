@@ -12,7 +12,7 @@ const Tabs = () => {
       {/* Tab Buttons */}
       <div
         id="tab-buttons"
-        className="flex dark:bg-[#16102B] bg-[#EAF5FF] rounded-full p-2"
+        className="flex dark:bg-[#16102B] bg-[#EAF5FF] rounded-full p-2 max-md:flex-wrap max-md:justify-center"
       >
         {tabData.map((tab, index) => (
           <a
@@ -49,21 +49,21 @@ const Tabs = () => {
 // Example data for tabs
 const tabData = [
   {
-    label: "Tab 1",
+    label: "Our Vision",
     color: "",
     content: [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     ],
   },
   {
-    label: "Tab 2",
+    label: "Our Mission",
     color: "text-red-500",
     content: [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     ],
   },
   {
-    label: "Tab 3",
+    label: "Our Value",
     color: "text-purple-600",
     content: [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",

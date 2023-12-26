@@ -38,7 +38,7 @@ export const links = [
       {
         Head: "Topwear",
         sublink: [
-          { name: "About Us", link: "/", img: about, cat: "About Us" },
+          { name: "About Us", link: "/about", img: about, cat: "About Us" },
           {
             name: "Contact Us",
             link: "/contact",

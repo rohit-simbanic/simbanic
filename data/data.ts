@@ -25,30 +25,27 @@ import backend from "@/public/images/services/backend.svg";
 import mobile from "@/public/images/services/mobile.svg";
 
 export const links = [
-  {
-    name: "Home",
-    hash: "/",
-  },
-  {
-    name: "Company",
-    hash: "#",
-    submenu: true,
-    img: menuTeam,
-    sublinks: [
-      {
-        Head: "Topwear",
-        sublink: [
-          { name: "About Us", link: "/about", img: about, cat: "About Us" },
-          {
-            name: "Contact Us",
-            link: "/contact",
-            img: star,
-            cat: "Company reviews",
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   name: "Company",
+  //   hash: "#",
+  //   submenu: true,
+  //   img: menuTeam,
+  //   sublinks: [
+  //     {
+  //       Head: "Topwear",
+  //       sublink: [
+  //         { name: "About Us", link: "/about", img: about, cat: "About Us" },
+  //         {
+  //           name: "Contact Us",
+  //           link: "/contact",
+  //           img: star,
+  //           cat: "Company reviews",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
+  { name: "About Us", hash: "/about" },
   {
     name: "Services",
     hash: "#",
@@ -60,6 +57,9 @@ export const links = [
           {
             name: "Product Engineering",
             link: "/service/product-engineering",
+            description:
+              "Building Impactful Software Products to Solve Your Unique Business Problems",
+            logoUrl: require("@/public/images/services/product.svg"),
             img: ux,
             cat: "UX",
           },
@@ -71,6 +71,9 @@ export const links = [
           {
             name: "Performance Engineering",
             link: "/service/performance-engineering",
+            description:
+              "Building High Performance Solutions for Extreme Load Conditions",
+            logoUrl: require("@/public/images/services/performance.svg"),
             img: mobile,
             cat: "Mobile",
           },
@@ -80,19 +83,11 @@ export const links = [
         Head: "Topwear",
         sublink: [
           {
-            name: "Application Modernisation",
-            link: "/service/application-modernisation",
-            img: code,
-            cat: "Code",
-          },
-        ],
-      },
-      {
-        Head: "Topwear",
-        sublink: [
-          {
             name: "Digital Experience",
             link: "/service/digital-experience",
+            description:
+              "Foster Positive Brand Identity with Immersive Customer Experiences and Pleasant Interactions",
+            logoUrl: require("@/public/images/services/digital.svg"),
             img: backend,
             cat: "Bakcend",
           },
@@ -104,6 +99,9 @@ export const links = [
           {
             name: "Cloud Engineering",
             link: "/service/cloud-engineering",
+            description:
+              "Unlock Business Agility and Flexibility with Cloud Scalability and Data Security",
+            logoUrl: require("@/public/images/services/cloud.svg"),
             img: cart,
             cat: "Ecommerce",
           },
@@ -115,6 +113,9 @@ export const links = [
           {
             name: "Application Modernisation",
             link: "/service/application-modernisation",
+            description:
+              "Future-Proof Your Application with Improved Tech Stack, Code, and Closb Infrastructure",
+            logoUrl: require("@/public/images/services/application.svg"),
             img: code,
             cat: "UX",
           },
@@ -126,6 +127,9 @@ export const links = [
           {
             name: "Quality Engineering",
             link: "/service/quality-engineering",
+            description:
+              "Enabling Excellence in Robust Digital Product Development with Total Quality Management Processes and Tools",
+            logoUrl: require("@/public/images/services/quality.svg"),
             img: quality,
             cat: "Quality",
           },

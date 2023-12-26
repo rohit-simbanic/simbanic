@@ -119,34 +119,16 @@ export default function HeaderMenu() {
                           <>
                             <div className="flex gap-2 items-center">
                               <span>{link.name}</span>
-                              {(link.name === "Company" ||
-                                link.name === "Services") && <FaChevronDown />}
+                              {link.name === "Services" && <FaChevronDown />}
                             </div>
-                            {(link.name === "Company" ||
-                              link.name === "Services") && (
+                            {link.name === "Services" && (
                               <div
-                                className={`relative top-[0] ${
-                                  link.name === "Company"
-                                    ? "right-[0px]"
-                                    : "left-[0px]"
-                                } hidden group-hover:md:block  transition-all duration-500 ease-in-out z-50 ${
-                                  link.name === "Company"
-                                    ? "w-[full]"
-                                    : "w-[full]"
-                                }`}
+                                className={`relative top-[0] left-0 hidden group-hover:md:block  transition-all duration-500 ease-in-out z-50 w-full}`}
                               >
                                 <div
-                                  className={`bg-white py-2 px-5 rounded-md  ${
-                                    link.name === "Company"
-                                      ? "grid grid-cols-1"
-                                      : "flex gap-2 justify-between items-center"
-                                  }  gap-[.1rem]`}
+                                  className={`bg-white py-2 px-5 rounded-md flex gap-2 justify-between items-center`}
                                 >
-                                  <div
-                                    className={`${
-                                      link.name === "Company" ? "" : ""
-                                    }`}
-                                  >
+                                  <div>
                                     {link.sublinks &&
                                       link.sublinks.map((mysublinks, i) => (
                                         <div key={i}>
@@ -164,19 +146,13 @@ export default function HeaderMenu() {
                                                   href={slink.link}
                                                   className="hover:text-primary flex gap-2"
                                                 >
-                                                  {link.name === "Company" ? (
-                                                    <>
-                                                      <p>{slink.name}</p>
-                                                    </>
-                                                  ) : (
-                                                    <div className="">
-                                                      <div className="flex gap-1 items-center">
-                                                        <p className="">
-                                                          {slink.name}
-                                                        </p>
-                                                      </div>
+                                                  <div className="">
+                                                    <div className="flex gap-1 items-center">
+                                                      <p className="">
+                                                        {slink.name}
+                                                      </p>
                                                     </div>
-                                                  )}
+                                                  </div>
                                                 </Link>
                                               </li>
                                             )
@@ -216,9 +192,7 @@ export default function HeaderMenu() {
                       link.name === "Contact us" ? "/contact" : `${link.hash}`
                     }
                     className={`${
-                      link.name === "Company" || link.name === "Services"
-                        ? "group"
-                        : ""
+                      link.name === "Services" ? "group relative" : ""
                     } p-3 xl:px-8 xl:py-3 active text-[#1E273B] dark:text-[#C4CDE1] ${
                       link.name === "Contact us" ? "menu-button" : ""
                     }`}
@@ -232,38 +206,19 @@ export default function HeaderMenu() {
                         <MdEmail className="mr-2" />
                         Contact us
                       </span>
-                    ) : link.name === "Company" || link.name === "Services" ? (
-                      <div className={`relative `}>
+                    ) : link.name === "Services" ? (
+                      <>
                         <span className="flex items-center gap-2">
                           {link.name}
                           <FaChevronDown />
                         </span>
-                        {(link.name === "Company" ||
-                          link.name === "Services") && (
-                          <div>
-                            <div
-                              className={`absolute top-[3.5rem] ${
-                                link.name === "Company"
-                                  ? "right-[0px]"
-                                  : "left-[0px]"
-                              } mt-[-390px]  group-hover:mt-[0px] opacity-0 group-hover:md:opacity-100  transition-all duration-500 ease-in-out z-50 ${
-                                link.name === "Company"
-                                  ? "w-[249px]"
-                                  : "w-[261px]"
-                              }`}
-                            >
-                              <div
-                                className={`bg-white p-5 rounded-md  ${
-                                  link.name === "Company"
-                                    ? "grid grid-cols-1"
-                                    : "flex gap-2 justify-between items-center"
-                                }  gap-[.1rem]`}
-                              >
-                                <div
-                                  className={`${
-                                    link.name === "Company" ? "" : ""
-                                  }`}
-                                >
+                        {link.name === "Services" && (
+                          <div className="absolute top-[28px] -left-[407px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[769px] transform">
+                            <div className="relative top-6 p-6 bg-white dark:bg-[#412767] rounded-xl shadow-xl w-full">
+                              <div className="w-10 h-10 bg-white dark:bg-[#412767] transform rotate-45 absolute top-0 left-[17.25rem] z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm"></div>
+
+                              <div className="relative z-50">
+                                <div className="grid grid-cols-2 gap-6">
                                   {link.sublinks &&
                                     link.sublinks.map((mysublinks, i) => (
                                       <div key={i}>
@@ -273,26 +228,31 @@ export default function HeaderMenu() {
 
                                         {mysublinks.sublink.map((slink, i) => (
                                           <li
-                                            className="text-sm text-gray-600 my-5"
+                                            className="text-sm text-gray-600"
                                             key={i}
                                           >
                                             <Link
                                               href={slink.link}
                                               className="hover:text-primary flex gap-2"
                                             >
-                                              {link.name === "Company" ? (
-                                                <>
-                                                  <p>{slink.name}</p>
-                                                </>
-                                              ) : (
-                                                <div className="">
-                                                  <div className="flex gap-1 items-center">
-                                                    <p className="">
+                                              <div className="">
+                                                <div className="flex gap-3 items-center">
+                                                  <Image
+                                                    src={slink.logoUrl}
+                                                    alt=""
+                                                    height={70}
+                                                    width={70}
+                                                  />
+                                                  <div>
+                                                    <p className="dark:text-white">
                                                       {slink.name}
+                                                    </p>
+                                                    <p className="text-14px font-light dark:text-[#D7D2D2] mt-2">
+                                                      {slink.description}
                                                     </p>
                                                   </div>
                                                 </div>
-                                              )}
+                                              </div>
                                             </Link>
                                           </li>
                                         ))}
@@ -303,9 +263,9 @@ export default function HeaderMenu() {
                             </div>
                           </div>
                         )}
-                      </div>
+                      </>
                     ) : (
-                      <span>{pathname != "/" && link.name}</span>
+                      <span>{link.name}</span>
                     )}
                   </Link>
                 ))}

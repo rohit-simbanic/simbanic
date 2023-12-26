@@ -1,4 +1,3 @@
-import { usePathname } from "next/navigation";
 import React from "react";
 
 type SectionHeadingProps = {
@@ -6,7 +5,6 @@ type SectionHeadingProps = {
 };
 
 export default function SectionHeading({ children }: SectionHeadingProps) {
-  const pathname = usePathname();
   return (
     <h2
       className={`text-[45px]

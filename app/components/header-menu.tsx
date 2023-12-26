@@ -24,7 +24,10 @@ export default function HeaderMenu() {
   };
 
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isMobileMenu, setIsMobileMenu] = useState(false);
+  const toggleMobileMenu = () => {
+    setIsMobileMenu(!isMobileMenu);
+  };
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 120) {
@@ -111,19 +114,23 @@ export default function HeaderMenu() {
                             className={`flex items-center ${
                               theme === "dark" ? "bg-[#EC2F79]" : "bg-[#592CBA]"
                             }  text-white py-2 px-4 rounded-full`}
+                            onClick={toggleMenu}
                           >
                             <MdEmail className="mr-2" />
                             Contact us
                           </span>
-                        ) : (
+                        ) : link.name === "Services" ? (
                           <>
-                            <div className="flex gap-2 items-center">
+                            <div
+                              className="flex gap-2 items-center"
+                              onClick={toggleMobileMenu}
+                            >
                               <span>{link.name}</span>
                               {link.name === "Services" && <FaChevronDown />}
                             </div>
-                            {link.name === "Services" && (
+                            {link.name === "Services" && isMobileMenu && (
                               <div
-                                className={`relative top-[0] left-0 hidden group-hover:md:block  transition-all duration-500 ease-in-out z-50 w-full}`}
+                                className={`relative top-[0] left-0  transition-all duration-500 ease-in-out z-50 w-full}`}
                               >
                                 <div
                                   className={`bg-white py-2 px-5 rounded-md flex gap-2 justify-between items-center`}
@@ -131,7 +138,7 @@ export default function HeaderMenu() {
                                   <div>
                                     {link.sublinks &&
                                       link.sublinks.map((mysublinks, i) => (
-                                        <div key={i}>
+                                        <div key={i} onClick={toggleMenu}>
                                           {/* <h1 className="text-lg font-semibold">
                                       {mysublinks.Head}
                                     </h1> */}
@@ -164,6 +171,8 @@ export default function HeaderMenu() {
                               </div>
                             )}
                           </>
+                        ) : (
+                          <span onClick={toggleMenu}>{link.name}</span>
                         )}
                       </Link>
                     </li>

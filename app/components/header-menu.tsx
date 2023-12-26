@@ -94,7 +94,7 @@ export default function HeaderMenu() {
             {menuOpen && (
               <AnimatePresence>
                 <motion.ul
-                  className={`mt-[73px] absolute left-0 top-[57px] z-30 w-full ${
+                  className={`mt-[73px] absolute left-0 top-[57px] z-50 w-full ${
                     theme === "dark" ? "bg-[#0E0421]" : "bg-white"
                   }`}
                   initial={{ opacity: 0, y: -10 }}

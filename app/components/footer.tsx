@@ -96,7 +96,7 @@ export default function Footer() {
                   key={index}
                   href={
                     footerLink.pages === "Contact Us"
-                      ? "#contact"
+                      ? "/contact"
                       : `${footerLink.hash}`
                   }
                   className="text-[#1A1A1A] text-[16px] font-graphik font-normal dark:text-[#E5EDFE] leading-9 hover:font-bold"

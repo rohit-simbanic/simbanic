@@ -421,3 +421,22 @@ export const footerData = {
   ],
   siteLinks: [{ links: "Sitemap" }],
 };
+
+export const contactInfo = [
+  {
+    contactImg: require("@/public/images/contact/map.svg"),
+    heading: "Our Address",
+    details:
+      "612, Rhythm Plaza, Amar Jawan Cir, Nikol, Ahmedabad, Gujarat 382350",
+  },
+  {
+    contactImg: require("@/public/images/contact/telephone.svg"),
+    heading: "Contact Info",
+    details: "+91 - 076228 11355\n +1 (306) 737-2879",
+  },
+  {
+    contactImg: require("@/public/images/contact/email.svg"),
+    heading: "Email Us",
+    details: "info@simbanic.com",
+  },
+];

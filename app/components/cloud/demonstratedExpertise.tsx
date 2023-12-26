@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function DemonstratedExpertise() {
   return (
     <section className="expertise my-[80px] relative">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-5">
         <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-12 lg:gap-30 xl:gap-56">
           <div className="title-text text-center lg:text-left">
             <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[35px]">

@@ -10,7 +10,7 @@ export default function ServiceSlider() {
 
   return (
     <section className="service-slider mt-[56px] mb-[80px]">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-5">
         <div className="grid grid-cols-1 justify-items-center relative pt-[53px] bg-[url('../public/images/services/productEng/slider-shadow.svg')] bg-no-repeat bg-[center_top_0rem]">
           <motion.div
             initial={{ opacity: 0, y: -10 }}

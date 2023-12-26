@@ -17,7 +17,7 @@ const page = () => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
-        className="-z-10 relative"
+        className="-z-10 relative px-5"
       >
         <h3 className="text-[#162753] text-[20px] font-prompt text-center leading-[160%] font-semibold dark:text-white">
           Enhance Efficiency and Maintain Quality with Test Automation Services

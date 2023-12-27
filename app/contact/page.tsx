@@ -55,7 +55,12 @@ const page = () => {
             >
               <div className="flex items-center mb-6">
                 <div className="mr-4 dark:bg-[#211239] bg-[#f1ecf9] p-3 rounded-md">
-                  <Image src={contact.contactImg} alt={contact.heading} />
+                  <Image
+                    src={contact.contactImg}
+                    alt={contact.heading}
+                    height={30}
+                    width={30}
+                  />
                 </div>
                 <div>
                   <h3 className="font-graphik dark:text-[#E5EDFE] font-bold mb-2">

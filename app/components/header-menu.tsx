@@ -57,7 +57,7 @@ export default function HeaderMenu() {
     <motion.header
       className={`bg-${
         isScrolled
-          ? "white lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-20 dark:bg-[#0E0421] lg:pt-0 dark:border-b dark:border-solid dark:border-cyan-800"
+          ? "white dark:bg-[#0E0421] lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-20 lg:pt-0 dark:border-b dark:border-solid dark:border-cyan-800"
           : "white bg-opacity-5"
       } text-white md:block pt-[65px]`}
       initial="initial" // Initial animation state
@@ -249,14 +249,14 @@ export default function HeaderMenu() {
                                                   <Image
                                                     src={slink.logoUrl}
                                                     alt=""
-                                                    height={70}
-                                                    width={70}
+                                                    height={50}
+                                                    width={50}
                                                   />
                                                   <div>
-                                                    <p className="dark:text-white">
+                                                    <p className="dark:text-white text-xs">
                                                       {slink.name}
                                                     </p>
-                                                    <p className="text-14px font-light dark:text-[#D7D2D2] mt-2">
+                                                    <p className="text-[13px] font-light dark:text-[#D7D2D2] mt-1">
                                                       {slink.description}
                                                     </p>
                                                   </div>

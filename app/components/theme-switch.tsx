@@ -6,6 +6,7 @@ import { useTheme } from "../context/theme-context";
 
 export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
+  console.log("theme", theme);
 
   return (
     <button

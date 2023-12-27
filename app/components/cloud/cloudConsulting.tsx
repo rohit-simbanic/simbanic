@@ -22,18 +22,20 @@ export default function CloudConsulting() {
 
           <div>
             <h3 className="text-[#162753] text-[20px] font-prompt text-center leading-[160%] font-semibold dark:text-white">
-              Scalable Cloud Native Application Development Services for
-              Business Growth
+              Revamp Your Cloud Infrastructure with Cloud Consulting Services: A
+              Fresh Start to Optimize Your Cloud.
             </h3>
             <p className="text-[#A8ADB3] font-prompt text-[16px] text-center leading-[160%]">
-              By leveraging extensive tooling, development techniques, and
-              adopting a cloud-native approach, we can simplify
-              <br /> operations, build and deliver with speed and seamlessly
-              weave security into your software delivery process.
+              With our cloud consulting services, you can strategically plan
+              your cloud foundation and <br />
+              redefine your infrastructure, transforming your organization into
+              an agent
+              <br /> of change and experiencing a significant shift towards
+              cloud excellence.
             </p>
           </div>
         </div>
-        <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-12 lg:gap-30 xl:gap-56 my-28">
+        <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-12 lg:gap-30 xl:gap-56 md:mt-12">
           <div className="about-img">
             <div className="flex justify-center">
               <Image
@@ -49,7 +51,7 @@ export default function CloudConsulting() {
               <span className="dark:text-[#E5EDFE]">Capabilities</span>
             </h2>
 
-            <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[20px] my-4 mx-auto lg:mx-0">
+            <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[16px] my-4 mx-auto lg:mx-0">
               Cloud consulting services typically include a range of offerings
               to helporganizations optimize their cloud strategy, architecture,
               and operations
@@ -68,6 +70,165 @@ export default function CloudConsulting() {
                 {pathname === "/" ? "Contact us" : "Get started"}
               </span>
             </Link>
+          </div>
+        </div>
+        <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-12 lg:gap-15 xl:gap-30 md:mt-12">
+          <div className="about-text text-center lg:text-left">
+            <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[28px]">
+              <span className="dark:text-[#E5EDFE]">
+                Cloud strategy and planning
+              </span>
+            </h2>
+
+            <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[16px] my-4 mx-auto lg:mx-0">
+              This involves assessing an organization&#39;s current IT
+              environment, business objectives, and requirements to create a
+              comprehensive plan for leveraging cloud technologies effectively.
+            </p>
+          </div>
+          <div className="about-img">
+            <div className="flex justify-center">
+              <Image
+                src={require("@/public/images/services/cloudEng/s-1.svg")}
+                className="w-[100%] lg:w-[80%] "
+                alt={""}
+              />
+            </div>
+          </div>
+          <div className="about-img">
+            <div className="flex justify-center">
+              <Image
+                src={require("@/public/images/services/cloudEng/s-2.svg")}
+                className="w-[100%] lg:w-[80%] "
+                alt={""}
+              />
+            </div>
+          </div>
+          <div className="about-text text-center lg:text-left">
+            <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[28px]">
+              <span className="dark:text-[#E5EDFE]">
+                Cloud migration and deployment
+              </span>
+            </h2>
+
+            <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[16px] my-4 mx-auto lg:mx-0">
+              This includes designing and executing a smooth migration of
+              applications, data, and infrastructure to the cloud, ensuring
+              minimal disruption to business operations.
+            </p>
+          </div>
+          <div className="about-text text-center lg:text-left">
+            <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[28px]">
+              <span className="dark:text-[#E5EDFE]">
+                Cloud architecture and design
+              </span>
+            </h2>
+
+            <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[16px] my-4 mx-auto lg:mx-0">
+              This involves designing and implementing a scalable and secure
+              cloud architecture that aligns with an organization&#39;s specific
+              needs, such as selecting appropriate cloud services, designing
+              network configurations, and establishing best practices for data
+              management and security.
+            </p>
+          </div>
+          <div className="about-img">
+            <div className="flex justify-center">
+              <Image
+                src={require("@/public/images/services/cloudEng/s-3.svg")}
+                className="w-[100%] lg:w-[80%] "
+                alt={""}
+              />
+            </div>
+          </div>
+          <div className="about-img">
+            <div className="flex justify-center">
+              <Image
+                src={require("@/public/images/services/cloudEng/s-4.svg")}
+                className="w-[100%] lg:w-[80%] "
+                alt={""}
+              />
+            </div>
+          </div>
+          <div className="about-text text-center lg:text-left">
+            <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[28px]">
+              <span className="dark:text-[#E5EDFE]">
+                Cloud security and compliance
+              </span>
+            </h2>
+
+            <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[16px] my-4 mx-auto lg:mx-0">
+              This encompasses implementing robust security measures and
+              ensuring compliance with industry regulations and standards to
+              protect data and applications in the cloud.
+            </p>
+          </div>
+          <div className="about-text text-center lg:text-left">
+            <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[28px]">
+              <span className="dark:text-[#E5EDFE]">
+                Cloud cost optimization
+              </span>
+            </h2>
+
+            <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[16px] my-4 mx-auto lg:mx-0">
+              This involves optimizing cloud spending and resource utilization,
+              such as identifying cost-saving opportunities, right-sizing cloud
+              resources, and monitoring and managing cloud costs.
+            </p>
+          </div>
+          <div className="about-img">
+            <div className="flex justify-center">
+              <Image
+                src={require("@/public/images/services/cloudEng/s-5.svg")}
+                className="w-[100%] lg:w-[80%] "
+                alt={""}
+              />
+            </div>
+          </div>
+          <div className="about-img">
+            <div className="flex justify-center">
+              <Image
+                src={require("@/public/images/services/cloudEng/s-6.svg")}
+                className="w-[100%] lg:w-[80%] "
+                alt={""}
+              />
+            </div>
+          </div>
+          <div className="about-text text-center lg:text-left">
+            <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[28px]">
+              <span className="dark:text-[#E5EDFE]">
+                Cloud operations and management
+              </span>
+            </h2>
+
+            <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[16px] my-4 mx-auto lg:mx-0">
+              This includes providing ongoing monitoring, management, and
+              support for cloud resources, troubleshooting issues, and
+              optimizing performance to ensure smooth and efficient cloud
+              operations.
+            </p>
+          </div>
+          <div className="about-text text-center lg:text-left">
+            <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[28px]">
+              <span className="dark:text-[#E5EDFE]">
+                Cloud training and knowledge transfer
+              </span>
+            </h2>
+
+            <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[16px] my-4 mx-auto lg:mx-0">
+              This may involve providing training and knowledge transfer to the
+              organization&#39;s IT staff to enable them to effectively manage
+              and operate cloud environments.
+            </p>
+          </div>
+          <div className="about-img">
+            <div className="flex justify-center">
+              <Image
+                src={require("@/public/images/services/cloudEng/s-5.svg")}
+                className="w-[100%] lg:w-[80%] "
+                alt={""}
+              />
+            </div>
           </div>
         </div>
       </div>

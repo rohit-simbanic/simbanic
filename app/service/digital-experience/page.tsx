@@ -7,6 +7,7 @@ import Portfolio from "@/app/components/portfolio";
 import ServiceSlider from "@/app/components/serviceSlider";
 import Services from "@/app/components/services";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 
 const page = () => {
@@ -43,6 +44,37 @@ const page = () => {
             </div>
             <div>
               <Carousel />
+            </div>
+          </div>
+          <div className="md:mt-[110px] mt-4 max-w-screen-xl px-4">
+            <div className="grid md:grid-cols-12 grid-cols-1 gap-[30px] items-center md:px-9">
+              <div className="md:col-span-5 order-1 md:order-2">
+                <div className="lg:ms-8 flex justify-center">
+                  <Image
+                    src={require("@/public/images/services/digitalExp/digital_experience.png")}
+                    alt=""
+                    width={761}
+                    height={415}
+                    className="w-[76%]"
+                  />
+                </div>
+              </div>
+
+              <div className="md:col-span-7 order-2 md:order-1">
+                <div className="lg:me-5">
+                  <h3 className="mb-4 text-[#162753] text-[20px] max-md:text-center font-prompt leading-[160%] font-semibold dark:text-white">
+                    Capabilities
+                  </h3>
+
+                  <p className="text-[#A8ADB3] font-prompt text-[16px] max-sm:text-center leading-[160%] max-md:text-center">
+                    Embrace a Consumer-Centric Approach to Digital Experience
+                    Designs, Crafting Solutions Rooted in User Problems. Simform
+                    Mitigates Risks of Broken User Flows and Unnecessary
+                    Features by Focusing on Ideas and Solutions through its
+                    Digital Experience Design Services.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

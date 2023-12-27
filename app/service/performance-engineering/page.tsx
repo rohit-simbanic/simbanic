@@ -7,6 +7,7 @@ import Portfolio from "@/app/components/portfolio";
 import ServiceSlider from "@/app/components/serviceSlider";
 import Services from "@/app/components/services";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 
 const page = () => {
@@ -43,6 +44,39 @@ const page = () => {
             </div>
             <div>
               <Carousel />
+            </div>
+          </div>
+          <div className="md:mt-[110px] mt-4 max-w-screen-xl px-4">
+            <div className="grid md:grid-cols-12 grid-cols-1 gap-[30px] items-center md:px-9">
+              <div className="md:col-span-5 order-1 md:order-2">
+                <div className="lg:ms-8 flex justify-center">
+                  <Image
+                    src={require("@/public/images/services/performanceEng/performance-capabilities.png")}
+                    alt=""
+                    width={561}
+                    height={315}
+                    className="w-[36%]"
+                  />
+                </div>
+              </div>
+
+              <div className="md:col-span-7 order-2 md:order-1">
+                <div className="lg:me-5">
+                  <h3 className="mb-4 text-[#162753] text-[20px] max-md:text-center font-prompt leading-[160%] font-semibold dark:text-white">
+                    Capabilities
+                  </h3>
+
+                  <p className="text-[#A8ADB3] font-prompt text-[16px] max-sm:text-center leading-[160%] max-md:text-center">
+                    Our comprehensive service portfolio includes world-class
+                    performance engineering services that utilize a dual-shift
+                    approach, delivering increased ROI and faster product
+                    delivery. We recognize the significance of building flawless
+                    products that excel under extreme loads, as the absence of
+                    robust performance can have lasting impacts on your product
+                    and services.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -57,7 +57,7 @@ export default function About() {
                 analytics to cybersecurity and AI, we have the expertise ...
               </p>
             ) : (
-              <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[20px] my-4 mx-auto lg:mx-0">
+              <p className=" w-4/5 dark:text-[#D7D2D2] text-[#4A505F] leading-[150%] text-[16px] my-4 mx-auto lg:mx-0">
                 Simbanic empowers organizations on their transformation journey
                 withcutting-edge cloud application development services. Our
                 unique cloudmanagement strategies and industrialized solutions

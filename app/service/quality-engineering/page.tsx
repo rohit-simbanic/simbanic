@@ -56,8 +56,6 @@ const page = () => {
                   <Image
                     src={require("@/public/images/services/automationEng/automation.png")}
                     alt=""
-                    width={48}
-                    height={48}
                     width={761}
                     height={415}
                     className="w-[76%]"

@@ -116,7 +116,7 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 py-14 text-center md:w-2/3 lg:w-3/4 mx-auto">
+            <div className="grid grid-cols-1 pt-14 text-center md:w-2/3 lg:w-3/4 mx-auto">
               <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[35px] text-center">
                 <span className="dark:text-[#E5EDFE] text-center">
                   <span className="text-[#B272FF]">Performance</span> Testing
@@ -225,21 +225,21 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center mt-10">
+            <div className="text-center mt-20">
               <h2 className="font-graphik font-bold leading-[124%] capitalize mb-8 text-[#111827] text-[35px] text-center">
                 <span className="dark:text-[#E5EDFE] text-center">
                   <span className="text-[#B272FF]">Load</span> Testing
                 </span>
               </h2>
               <h3 className="text-[#162753] text-[20px] font-prompt text-center leading-[160%] font-semibold dark:text-white">
-                Optimize Performance with Our Load Testing Services: Simulating
-                <br />
-                and Measuring Accurate Performance. Establish a Stimulating Test{" "}
-                Environment and
-                <br /> Monitor Your Application&#39;s Performance to Ensure
-                <br />
-                Stability and Smooth Functioning
+                Optimize Performance with Our Load Testing Services: <br />
+                Simulating and Measuring Accurate Performance.
               </h3>
+              <p className="leading-normal font-prompt text-sm mb-4 text-slate-400 dark:text-white max-w-screen-sm mx-auto underline underline-offset-4 mt-4">
+                Establish a Stimulating Test Environment and Monitor Your
+                Application&#39;s Performance to Ensure Stability and Smooth
+                Functioning
+              </p>
               <div className="flex md:flex-row flex-col gap-3 items-center">
                 <div className=" md:w-1/2 w-full mt-3">
                   <h3 className="mb-4 text-[#162753] text-[20px] md:text-left text-center font-prompt leading-[160%] font-semibold dark:text-white">

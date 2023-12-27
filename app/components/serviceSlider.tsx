@@ -21,7 +21,21 @@ export default function ServiceSlider() {
             <SectionHeading>
               <span className="dark:text-[#E5EDFE] text-center">
                 Software{" "}
-                <span className="text-[#B272FF]">Product Engineering</span>{" "}
+                <span className="text-[#B272FF]">
+                  {pathname === "/service/product-engineering"
+                    ? "Product Engineering"
+                    : pathname === "/service/performance-engineering"
+                    ? "Performance Engineering"
+                    : pathname === "/service/digital-experience"
+                    ? "Digital Experience Engineering"
+                    : pathname === "/service/cloud-engineering"
+                    ? "Cloud Engineering"
+                    : pathname === "/service/application-modernisation"
+                    ? "Application Modernisation"
+                    : pathname === "/service/quality-engineering"
+                    ? "Quality Engineering"
+                    : ""}{" "}
+                </span>{" "}
                 Services
               </span>
             </SectionHeading>

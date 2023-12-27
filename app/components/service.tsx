@@ -67,34 +67,10 @@ export default function Service() {
               key={service.id}
             >
               <div
-                className={`relative flex flex-col${
-                  pathname === "/service/product-engineering"
-                    ? ""
-                    : "sm:flex-row gap-[36px]"
-                } items-start group-hover:bg-[#0000001a] group-hover:bg-opacity-[0.1] group-hover:rounded-lg p-4 text-left`}
+                className={`relative flex flex-col items-start group-hover:bg-[#0000001a] group-hover:bg-opacity-[0.1] group-hover:rounded-lg p-4 text-left`}
               >
-                {pathname === "/service/product-engineering" ? (
-                  <>
-                    <div className="flex gap-2 w-full">
-                      <Image
-                        src={service.logoUrl}
-                        alt={service.name}
-                        width={70}
-                        height={70}
-                      />
-
-                      <div className="w-[91%">
-                        <h3 className="text-[25px] font-medium text-white leading-[134%] w-6 font-graphik dark:text-gray-100">
-                          {service.name}
-                        </h3>
-                      </div>
-                    </div>
-                    <p className="text-[14px] text-[#748CA3] my-5 font-prompt font-light leading-[134%] dark:text-gray-400">
-                      {service.description}
-                    </p>
-                  </>
-                ) : (
-                  <>
+                <>
+                  <div className="flex gap-2 w-full items-center">
                     <Image
                       src={service.logoUrl}
                       alt={service.name}
@@ -102,16 +78,16 @@ export default function Service() {
                       height={70}
                     />
 
-                    <div>
-                      <h3 className="text-[25px] font-medium text-white leading-[134%] w-6 font-graphik dark:text-gray-100">
+                    <div className="w-[91%]">
+                      <h3 className="text-[18px] font-medium text-white leading-[120%] font-graphik dark:text-gray-100">
                         {service.name}
                       </h3>
-                      <p className="text-[14px] text-[#748CA3] w-3/4 my-5 font-prompt font-light leading-[134%] dark:text-gray-400">
-                        {service.description}
-                      </p>
                     </div>
-                  </>
-                )}
+                  </div>
+                  <p className="text-[14px] text-[#748CA3] my-5 font-prompt font-light leading-[134%] dark:text-gray-400">
+                    {service.description}
+                  </p>
+                </>
               </div>
             </div>
           ))}

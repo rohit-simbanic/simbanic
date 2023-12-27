@@ -7,7 +7,6 @@ import SectionHeading from "../components/section-heading";
 import { blogData } from "@/data/data";
 import Image from "next/image";
 import { useTheme } from "../context/theme-context";
-import Testimonial from "../components/testimonial";
 import CompanyInfo from "../components/companyInfo";
 import Carousel from "../components/carousel";
 import Tabs from "../components/tabs";
@@ -96,7 +95,6 @@ const ContactPage = () => {
           </div>
         </div>
         <Team />
-        <Testimonial />
       </div>
 
       <CTA />

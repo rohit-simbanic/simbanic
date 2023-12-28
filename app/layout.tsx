@@ -7,8 +7,9 @@ import HeaderMenu from "./components/header-menu";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Simbanic Website | Homepage",
-  description: "site is under development",
+  title: "Simbanic Software Services",
+  description:
+    "Simbanic, an digital company offer its strategic design, engineering, and industry capabilities for building digital transformation of the organization ",
 };
 
 export default function RootLayout({

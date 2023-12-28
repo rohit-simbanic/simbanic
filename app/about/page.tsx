@@ -13,7 +13,6 @@ import Tabs from "../components/tabs";
 import { Team } from "../components/Team";
 
 const ContactPage = () => {
-  const { theme } = useTheme();
   return (
     <section className="about-page">
       <div className="container mx-auto px-5 xl:px-0 mb-[45px]">

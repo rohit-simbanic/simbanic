@@ -48,7 +48,7 @@ export const links = [
   { name: "About Us", hash: "/about" },
   {
     name: "Services",
-    hash: "#",
+    hash: "/service",
     submenu: true,
     sublinks: [
       {
@@ -397,9 +397,21 @@ export const blogData = {
 };
 
 export const footerData = {
-  footerDetails:
-    "612, Rhythm Plaza, Amar Jawan Cir, Nikol, Ahmedabad, Gujarat 382350",
-  phone: "+91 - 076228 11355",
+  footerDetails: [
+    {
+      country: "India",
+      address:
+        "612, Rhythm Plaza, Amar Jawan Cir, Nikol, Ahmedabad, Gujarat 382350",
+    },
+    {
+      country: "Canada",
+      address: "219 Britton Place Kitchener ON N2C 2T3",
+    },
+  ],
+  phone: [
+    { num: "(+91) 76228 11355", img: require("@/public/images/india.png") },
+    { num: "+1 (437) (992) 8076", img: require("@/public/images/canada.png") },
+  ],
   email: "info@simbanic.com",
   footerLinks: [
     { linkName: "Product Engineering", hash: "/service/product-engineering" },
@@ -432,7 +444,7 @@ export const contactInfo = [
   {
     contactImg: require("@/public/images/contact/telephone.svg"),
     heading: "Contact Info",
-    details: "+91 - 076228 11355\n +1 (306) 737-2879",
+    details: " (+91) 76228 11355 \n +1 (437) (992) 8076",
   },
   {
     contactImg: require("@/public/images/contact/email.svg"),

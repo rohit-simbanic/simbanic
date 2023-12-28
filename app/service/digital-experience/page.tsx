@@ -68,10 +68,10 @@ const page = () => {
 
                   <p className="text-[#A8ADB3] font-prompt text-[16px] max-sm:text-center leading-[160%] max-md:text-center">
                     Embrace a Consumer-Centric Approach to Digital Experience
-                    Designs, Crafting Solutions Rooted in User Problems. Simform
-                    Mitigates Risks of Broken User Flows and Unnecessary
-                    Features by Focusing on Ideas and Solutions through its
-                    Digital Experience Design Services.
+                    Designs, Crafting Solutions Rooted in User Problems.
+                    Simbanic Mitigates Risks of Broken User Flows and
+                    Unnecessary Features by Focusing on Ideas and Solutions
+                    through its Digital Experience Design Services.
                   </p>
                 </div>
               </div>

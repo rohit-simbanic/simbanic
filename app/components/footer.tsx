@@ -15,9 +15,9 @@ export default function Footer() {
         <div className="container mx-auto px-5">
           <div className="grid lg:grid-cols-12 grid-cols-12 sm:gap-10 relative">
             <div className="md:col-span-4 sm:col-span-6 col-span-12">
-              <Link href="/" className="">
+              <Link href="/" className="flex mb-6">
                 <Image
-                  className="h-16 sm:w-150"
+                  className="sm:w-150"
                   src={theme === "dark" ? logoDark : logoLight}
                   alt="logo"
                   width={200}
@@ -25,16 +25,25 @@ export default function Footer() {
                   priority={true}
                 />
               </Link>
-              <div className="flex gap-3 mb-3">
+              <div className="flex gap-3 mb-3 items-start">
                 <Image
                   src={require("@/public/images/footer/map.svg")}
                   width={24}
                   height={24}
                   alt={""}
                 />
-                <p className="text-[16px] text-[#4C4C4] dark:text-[#E5EDFE] font-graphik font-normal my-1 w-2/3">
-                  {footerData.footerDetails}
-                </p>
+                <div>
+                  {footerData.footerDetails.map((details, i) => (
+                    <div key={i} className="flex flex-col gap-2">
+                      <p className="text-[17px] text-[#4C4C4] dark:text-[#E5EDFE] font-prompt font-bold">
+                        {details.country}
+                      </p>
+                      <p className="text-[16px] text-[#4C4C4] dark:text-[#E5EDFE] font-graphik font-normal my-1 w-2/3">
+                        {details.address}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="flex gap-3 my-6">
                 <div>
@@ -50,7 +59,19 @@ export default function Footer() {
                     Call Us
                   </p>
                   <span className="text-[16px] text-[1A1A1A] dark:text-gray-100">
-                    <a href="tel:+91076228 11355">{footerData.phone}</a>
+                    {footerData.phone.map((number, i) => (
+                      <Link href={`tel:${number.num}`} key={i}>
+                        <p className="flex gap-2 my-2">
+                          <Image
+                            src={number.img}
+                            alt="fla"
+                            width={24}
+                            height={9}
+                          />
+                          {number.num}
+                        </p>
+                      </Link>
+                    ))}
                   </span>
                 </div>
               </div>
@@ -112,7 +133,7 @@ export default function Footer() {
               {footerData.siteLinks.map((footerLink, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  href="/sitemap.xml"
                   className="text-[#1A1A1A] text-[16px] font-graphik font-normal dark:text-[#E5EDFE] leading-9 hover:font-bold"
                 >
                   <p>{footerLink.links}</p>

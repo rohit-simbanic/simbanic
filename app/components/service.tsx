@@ -8,7 +8,7 @@ import rectangle from "@/public/images/services/rectangle.svg";
 
 export default function Service() {
   const pathname: string = usePathname();
-  console.log(pathname);
+
   const truncateDescription = (description: string) => {
     const words = description.split(" ");
     return words.slice(0, 7).join(" ");
@@ -16,7 +16,7 @@ export default function Service() {
 
   return (
     <>
-      {pathname === "/" && (
+      {(pathname === "/" || pathname === "/service") && (
         <>
           {services.servicesItem.map((service, i) => (
             <Link href={service.url} key={service.id}>

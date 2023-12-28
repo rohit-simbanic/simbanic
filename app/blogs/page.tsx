@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import CTA from "../components/cta";
 import Footer from "../components/footer";

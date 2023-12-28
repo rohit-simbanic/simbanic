@@ -25,7 +25,7 @@ export default function Footer() {
                   priority={true}
                 />
               </Link>
-              <div className="flex gap-3 mb-3 items-start">
+              <div className="flex gap-3 mb-4 items-start">
                 <Image
                   src={require("@/public/images/footer/map.svg")}
                   width={24}
@@ -38,7 +38,7 @@ export default function Footer() {
                       <p className="text-[17px] text-[#4C4C4] dark:text-[#E5EDFE] font-prompt font-bold">
                         {details.country}
                       </p>
-                      <p className="text-[16px] text-[#4C4C4] dark:text-[#E5EDFE] font-graphik font-normal my-1 w-2/3">
+                      <p className="text-[16px] text-[#4C4C4] dark:text-[#E5EDFE] font-graphik font-normal my-1 w-[87%]">
                         {details.address}
                       </p>
                     </div>

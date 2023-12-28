@@ -59,59 +59,49 @@ export default function ServiceSlider() {
               </p>
             </motion.div>
           )}
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            {pathname === "/service/product-engineering" && (
-              <Image
-                src={require("@/public/images/services/productEng/slider.svg")}
-                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
-                alt={""}
-              />
-            )}
-            {pathname === "/service/performance-engineering" && (
-              <Image
-                src={require("@/public/images/services/performanceEng/slider.svg")}
-                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
-                alt={""}
-              />
-            )}
-            {pathname === "/service/digital-experience" && (
-              <Image
-                src={require("@/public/images/services/digitalExp/slider.svg")}
-                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
-                alt={""}
-              />
-            )}
-            {pathname === "/service/application-modernisation" && (
-              <Image
-                src={require("@/public/images/services/applicationModern/slider.svg")}
-                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
-                alt={""}
-              />
-            )}
-            {pathname === "/service/cloud-engineering" && (
-              <Image
-                src={require("@/public/images/services/cloudEng/slider.svg")}
-                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
-                alt={""}
-              />
-            )}
-            {pathname === "/service/quality-engineering" && (
-              <Image
-                src={require("@/public/images/services/automationEng/slider.svg")}
-                className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
-                alt={""}
-              />
-            )}
-          </motion.div>
+
+          {pathname === "/service/product-engineering" && (
+            <Image
+              src={require("@/public/images/services/productEng/slider.svg")}
+              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              alt={""}
+            />
+          )}
+          {pathname === "/service/performance-engineering" && (
+            <Image
+              src={require("@/public/images/services/performanceEng/slider.svg")}
+              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              alt={""}
+            />
+          )}
+          {pathname === "/service/digital-experience" && (
+            <Image
+              src={require("@/public/images/services/digitalExp/slider.svg")}
+              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              alt={""}
+            />
+          )}
+          {pathname === "/service/application-modernisation" && (
+            <Image
+              src={require("@/public/images/services/applicationModern/slider.svg")}
+              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              alt={""}
+            />
+          )}
+          {pathname === "/service/cloud-engineering" && (
+            <Image
+              src={require("@/public/images/services/cloudEng/slider.svg")}
+              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              alt={""}
+            />
+          )}
+          {pathname === "/service/quality-engineering" && (
+            <Image
+              src={require("@/public/images/services/automationEng/slider.svg")}
+              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              alt={""}
+            />
+          )}
         </div>
       </div>
     </section>

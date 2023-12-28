@@ -181,17 +181,7 @@ export default function HeaderMenu() {
               </AnimatePresence>
             )}
           </nav>
-          <motion.div
-            className="hidden lg:block"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
+          <div className="hidden lg:block">
             <nav className="font-semibold text-base lg:text-lg">
               <ul className="mx-auto flex items-center gap-3">
                 {links.map((link, i) => (
@@ -280,7 +270,7 @@ export default function HeaderMenu() {
                 ))}
               </ul>
             </nav>
-          </motion.div>
+          </div>
         </div>
       </div>
     </motion.header>

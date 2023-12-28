@@ -1,5 +1,4 @@
 "use client";
-
 import { useTheme } from "../context/theme-context";
 import SectionHeading from "./section-heading";
 import Link from "next/link";

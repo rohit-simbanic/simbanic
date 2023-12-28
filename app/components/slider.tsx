@@ -21,12 +21,7 @@ export default function Slider() {
       <div className="container mx-auto px-5">
         <div className="grid lg:grid-cols-2 grid-cols-1 items-center">
           <div className="pr-0 lg:pr-7 text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="-z-10 relative"
-            >
+            <div className="-z-10 relative">
               <SectionHeading>
                 <span className="dark:text-[#E5EDFE]">
                   Empowering <br />
@@ -38,15 +33,10 @@ export default function Slider() {
                   Software Engineering
                 </span>
               </SectionHeading>
-            </motion.div>
-            <motion.p
-              initial={{ opacity: 0, y: -23 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -23 }}
-              className="font-prompt font-normal text-[20px] dark:text-[#A0A0A0] -z-10 relative"
-            >
+            </div>
+            <p className="font-prompt font-normal text-[20px] dark:text-[#A0A0A0] -z-10 relative">
               Agile in Culture and Mindset.
-            </motion.p>
+            </p>
             {/* <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -105,22 +95,11 @@ export default function Slider() {
             </div> */}
           </div>
           <div className="flex justify-center lg:justify-end">
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 125,
-                delay: 0.1,
-                duration: 0.7,
-              }}
-            >
-              <Image
-                src={require("@/public/images/working_man.svg")}
-                className="w-[100%] lg:w-[100%] pr-[2rem] sm:pr-0 lg:pr-[5.5rem]"
-                alt={""}
-              />
-            </motion.div>
+            <Image
+              src={require("@/public/images/working_man.svg")}
+              className="w-[100%] lg:w-[100%] pr-[2rem] sm:pr-0 lg:pr-[5.5rem]"
+              alt={""}
+            />
           </div>
         </div>
         <div>

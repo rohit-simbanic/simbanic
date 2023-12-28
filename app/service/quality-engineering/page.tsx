@@ -330,9 +330,9 @@ const page = () => {
                     Vulnerabilities and Safeguarding Against Unauthorized Access
                   </p>
                   <p className="font-prompt text-slate-400 text-left tracking-[1px] group-hover:text-white/50 transition-all duration-500 ease-in-out mt-3">
-                    Our application security testing services at Simform provide
-                    a comprehensive vulnerability assessment, enabling you to
-                    identify hidden security vulnerabilities that may be
+                    Our application security testing services at Simbanic
+                    provide a comprehensive vulnerability assessment, enabling
+                    you to identify hidden security vulnerabilities that may be
                     compromising the safety of your application. We help you
                     maintain app security operations throughout the software
                     development lifecycle, safeguarding against authorized

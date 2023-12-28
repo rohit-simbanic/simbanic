@@ -143,7 +143,7 @@ const page = () => {
               <div className="text-center md:px-6 p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 dark:border border-cyan-200 border-y-pink-500 ">
                 <div className="w-28 h-28 bg-indigo-600/5 text-indigo-600 rounded-3xl text-4xl flex align-middle justify-center items-center shadow-md dark:shadow-gray-800 mx-auto">
                   <Image
-                    src="data:image/png;base64,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"
+                    src={require("@/public/images/services/automationEng/setting.png")}
                     alt=""
                     width={48}
                     height={48}
@@ -171,7 +171,7 @@ const page = () => {
               <div className="text-center md:px-6 p-6 shadow-xl shadow-gray-100 dark:shadow-none transition duration-500 rounded-2xl mt-6 dark:border border-cyan-200 border-y-pink-500 ">
                 <div className="w-28 h-28 bg-red-600/5 text-red-600 rounded-3xl text-4xl flex align-middle justify-center items-center shadow-md dark:shadow-gray-800 mx-auto">
                   <Image
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADoklEQVR4nO2YfUgTYRzHV/3fH/VHUGPnbNbutnOuaYuCqDQoiOgFLUuCXixLiexFwbSNvemVbrZSGymlbpZpznxthjYsKxWkIDIri0orjXxN6cX6xXOY/dEfee6OubgvfOH+uOd338/ze57tuRMIePHixYsXL2aaKVpIqjBMtl3kR+xnw5g/sRvD8PVCITFHwKXEEnkUgS/pDV2+tv9QxO7B+B3RrHnnhoh+XKoaIYmQ62KxfB7r4Uk82Bq2PGz4qcMJ4G7lxF9u3YPM+ORvOL6kRyQKFLMWXiyR7wxdETY06mqiH/Q4vxTMR5Lg3LFTQMUlQlpcwpTdmHX5L5ASg2VMRgQ/EwjCZ7GRfwYhVX14UlhGF6+gzsNVXQb8aGjmrBPgboVt67YOoX3mcXo/P5li1bI1/agogriiS+c0OIy7JiMHgkh1rccAmL9sS0z4rgFU1BJ/kvOZh3E/L7oBCvnSFx4DiMTyqKNR0cOoKFrzkw1Qn30JLIZUsBhTodpqYwzQdb0WSFlIt9cALDoj/Bjro33WRPkegNVETQCco84wCj9Q7Z4GAPrUPx0wpE163KirCfKSjN4HOJui/wOgNU563M/bLfD6Wo33AfK0FHwefk8DWJP1jDqQm2TwPkBNpg2edTyE3p5OcJjMjI4TBaco7wM8ulwC7vpaaGtrgsbsv48L/1pGXd4GeFfmgtIrDrhZVQYdReWMOlCsN3sf4LPrDuRmZ4E9Lxc+VTb43h4AdH96Ou2xhhbfBIjdEwOxe2MYjRmdTgAjrru0fRLgUUEpmLUG2g/zS3wPIF2jm/gnRtc+B2DWmyYA0LXPATTaCiBDZ6DDN9rypwfA+eMaRhtyKu6vcoNdc5o9AMyfiDwcuW8IFc+MT+YcoNlmh/sXCuFNSS0EEiFvPe+APx4asW5LHyqOvkZ0Xq3kFICKS4TvDc3QmlsESlLd5jGARCKZLV2sHEG/56iw7sBRRkcDJnZoTsO9nIJxkIRvUqnSKGBDpCzYTsUmfP29ydDXiUINBa+uVdGvf574Y0U9HTotNpFeOugZ7523QIarhhdISCErAPPnS+fiuKq7MIX6/nu2PjjroJLKAof2jEcu1puh5aJj4rz0zlkHK9Wrh6QByjgBm0KzISeCH28K3ThYnmaFdruTfvVjwy+Lq+CBzQ6mgye+oplfJCEPCTjSTAyTb1bIQ8qDAtXtQaS6ky0rA9XNAQEKrVCoWMBVeF68ePHi9f/pF7eHvPvc3kQuAAAAAElFTkSuQmCC"
+                    src={require("@/public/images/services/automationEng/testing.png")}
                     alt=""
                     width={48}
                     height={48}
@@ -200,7 +200,7 @@ const page = () => {
               <div className="text-center md:px-6 p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 dark:border border-cyan-200 border-y-pink-500 ">
                 <div className="w-28 h-28 bg-emerald-600/5 text-emerald-600 rounded-3xl text-4xl flex align-middle justify-center items-center shadow-md dark:shadow-gray-800 mx-auto">
                   <Image
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACeElEQVR4nO2ZXWvTUBjHA4L6HVyvpxd+B9EeJ0wrelOabjBMroUNh7A7BVHoNPFy4NggGbN1OfVCVvBO/ARuvswXUGEvrZjp6ho3oXvkOVvGmX1Z0zRtKucHDyGlPef/P88/ofBIUgCMz2YjmmnN6aZVxNJMSjXjaa/UDYzPZiO6QW3dpHCgDGo/NKweKexo7OSZ6Gf3pzMnULRuWPN7JjJS2NFZbCjwp826YlLQTGujI6LOx4ciRFbmogm1SGQV3KqICVdjDyb63d+PahOxet8l3Jq4R1RWs33Ja70tEx+VVZvfpBEDqanH22gCxaemMtuNGiCuEVlZx719G8CTr7bBYQa8FKmxPpFV/88MH5s37z8BT6sM8CwufeTj5P+Z4U/kXx7RnG/xkzRXsS6/Z6AGPq/kfZmYpDn4spLvnIGgIMIAh+hAExARIQ4RoTqU/jhw72UKbMcOf4TWfuXhzou7TLQr/vr8CJyb7oObz8fab+BIevPQ4hnO3WBiUbTtrO/fJ54MwmpxNfwGCpsFGLCGmOhLM1dqig9thNwY9ZsxJv6ieZndVyO0BpCFwmuIzVxl11qE2kAjEGGAQ3SgCYiIEIeI0B7lt8uwdeYW7Kz9YPc73zZg6+xtKC98ha6IEIotSXH4fXoUyu+W2bUkxdnnHTHg9a8Enrgr2jk2sGvm1Mh+R0JvAMGTd44P7po4moTyq8r4tM2AV6p24ORw5zrQ9c+AV/Btg2KxE135FvICEQY4RAeagIgI1Rhw4PAhaBaXPnAdUH5KfsGBW50RUMClpH0bwGkhDtzaLj6hfr+QVHtaOGZVMzizClp4lO2hpFsmXiD4z/kLbXx6anPglAgAAAAASUVORK5CYII="
+                    src={require("@/public/images/services/automationEng/Regression-testing.png")}
                     alt=""
                     width={48}
                     height={48}
@@ -311,7 +311,7 @@ const page = () => {
                     <Image
                       width="36"
                       height="36"
-                      src="https://img.icons8.com/cotton/36/cryptocurrency-security.png"
+                      src={require("@/public/images/services/automationEng/application-security.png")}
                       alt="cryptocurrency-security"
                     />
                   </div>
@@ -360,7 +360,7 @@ const page = () => {
                     <Image
                       width="36"
                       height="36"
-                      src="https://img.icons8.com/doodle/36/google-mobile--v1.png"
+                      src={require("@/public/images/services/automationEng/network-testing.png")}
                       alt="google-mobile--v1"
                     />
                   </div>
@@ -410,7 +410,7 @@ const page = () => {
                     <Image
                       width="36"
                       height="36"
-                      src="https://img.icons8.com/office/36/000000/private-cloud-storage.png"
+                      src={require("@/public/images/services/automationEng/cloud.png")}
                       alt="private-cloud-storage"
                     />
                   </div>
@@ -454,9 +454,9 @@ const page = () => {
                   </svg>
                   <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-indigo-600 rounded-xl group-hover:text-white transition-all duration-500 ease-in-out text-3xl flex align-middle justify-center items-center">
                     <Image
-                      width="64"
-                      height="64"
-                      src="https://img.icons8.com/cotton/64/source-code--v1.png"
+                      width="40"
+                      height="40"
+                      src={require("@/public/images/services/automationEng/code.png")}
                       alt="source-code--v1"
                     />
                   </div>

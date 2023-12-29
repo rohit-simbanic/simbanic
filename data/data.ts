@@ -428,7 +428,7 @@ export const footerData = {
     { linkName: "Quality Engineering", hash: "/service/quality-engineering" },
   ],
   companyInfo: [
-    { pages: "About Us", hash: "/" },
+    { pages: "About Us", hash: "/about" },
     { pages: "Contact Us", hash: "/contact" },
   ],
   siteLinks: [{ links: "Sitemap" }],

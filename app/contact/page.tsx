@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SectionHeading from "../components/section-heading";
 import Form from "../components/form";
@@ -6,10 +7,18 @@ import { contactInfo } from "@/data/data";
 import GoogleMap from "../components/gmap";
 import Footer from "../components/footer";
 import Copyright from "../components/copyright";
+import { Helmet } from "react-helmet";
 
 const page = () => {
   return (
     <section className="contact-page">
+      <Helmet>
+        <title>Contact | Simbanic</title>
+        <meta
+          name="description"
+          content="Simbanic, an digital company offer its strategic design, engineering, and industry capabilities for building digital transformation of the organization"
+        />
+      </Helmet>
       <div className="container mx-auto px-5 xl:px-0 mb-[45px]">
         <div className="text-center mt-[45px] relative pt-[53px] bg-[url('../public/images/services/productEng/slider-shadow.svg')] -z-20 bg-no-repeat bg-[center_top_0rem]">
           <SectionHeading>

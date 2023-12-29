@@ -1,16 +1,9 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ThemeContextProvider from "./context/theme-context";
 import ThemeSwitch from "./components/theme-switch";
 import HeaderMenu from "./components/header-menu";
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Simbanic Software Services",
-  description:
-    "Simbanic, an digital company offer its strategic design, engineering, and industry capabilities for building digital transformation of the organization ",
-};
 
 export default function RootLayout({
   children,

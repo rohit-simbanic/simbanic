@@ -62,43 +62,43 @@ export default function ServiceSlider() {
 
           {pathname === "/service/product-engineering" && (
             <Image
-              src={require("@/public/images/services/productEng/slider.svg")}
-              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              src={require("@/public/images/services/productEng/slider.png")}
+              className="w-[80%] lg:w-[63%] pr-0 lg:pr-[5.5rem]"
               alt={""}
             />
           )}
           {pathname === "/service/performance-engineering" && (
             <Image
-              src={require("@/public/images/services/performanceEng/slider.svg")}
-              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              src={require("@/public/images/services/performanceEng/slider.png")}
+              className="w-[80%] lg:w-[65%] pr-0 lg:pr-[5.5rem]"
               alt={""}
             />
           )}
           {pathname === "/service/digital-experience" && (
             <Image
-              src={require("@/public/images/services/digitalExp/slider.svg")}
-              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              src={require("@/public/images/services/digitalExp/slider.png")}
+              className="w-[80%] lg:w-[65%] pr-0 lg:pr-[5.5rem]"
               alt={""}
             />
           )}
           {pathname === "/service/application-modernisation" && (
             <Image
-              src={require("@/public/images/services/applicationModern/slider.svg")}
-              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              src={require("@/public/images/services/applicationModern/slider.png")}
+              className="w-[80%] lg:w-[65%] pr-0 lg:pr-[5.5rem]"
               alt={""}
             />
           )}
           {pathname === "/service/cloud-engineering" && (
             <Image
-              src={require("@/public/images/services/cloudEng/slider.svg")}
-              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              src={require("@/public/images/services/cloudEng/slider.png")}
+              className="w-[80%] lg:w-[65%] pr-0 lg:pr-[5.5rem]"
               alt={""}
             />
           )}
           {pathname === "/service/quality-engineering" && (
             <Image
-              src={require("@/public/images/services/automationEng/slider.svg")}
-              className="w-[100%] lg:w-[100%] pr-0 lg:pr-[5.5rem]"
+              src={require("@/public/images/services/automationEng/slider.png")}
+              className="w-[80%] lg:w-[65%] pr-0 lg:pr-[5.5rem]"
               alt={""}
             />
           )}

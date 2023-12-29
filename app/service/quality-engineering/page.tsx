@@ -264,7 +264,7 @@ const page = () => {
                 </div>
                 <div className="flex justify-center w-1/2">
                   <Image
-                    src={require("@/public/images/marketingStrategy.svg")}
+                    src={require("@/public/images/marketingStrategy.png")}
                     alt={""}
                     className="w-[100%] md:w-[80%] "
                   />

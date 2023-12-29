@@ -7,11 +7,19 @@ import SectionHeading from "../components/section-heading";
 import { blogData } from "@/data/data";
 import Image from "next/image";
 import { useTheme } from "../context/theme-context";
+import { Helmet } from "react-helmet";
 
 const BlogPage = () => {
   const { theme } = useTheme();
   return (
     <section>
+      <Helmet>
+        <title>Blog | Simbanic</title>
+        <meta
+          name="description"
+          content="Simbanic, an digital company offer its strategic design, engineering, and industry capabilities for building digital transformation of the organization"
+        />
+      </Helmet>
       <div className="container mx-auto ">
         <div className="text-center mt-[45px]">
           <SectionHeading>

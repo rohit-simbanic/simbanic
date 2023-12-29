@@ -9,10 +9,18 @@ import Services from "@/app/components/services";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const page = () => {
   return (
     <>
+      <Helmet>
+        <title>Software Digital Experience Services | Simbanic</title>
+        <meta
+          name="description"
+          content="Simbanic, an digital company offer its strategic design, engineering, and industry capabilities for building digital transformation of the organization"
+        />
+      </Helmet>
       <ServiceSlider />
       <motion.div
         initial={{ opacity: 0, y: -10 }}
@@ -39,7 +47,7 @@ const page = () => {
           <div>
             <div>
               <h4 className="uppercase text-center font-graphik font-semibold text-[14px] mt-24 mb-9 dark:text-white">
-                TRUSTED BY +250 BUSINESSEs
+                TRUSTED BY +15 BUSINESSEs
               </h4>
             </div>
             <div>

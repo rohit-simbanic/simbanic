@@ -11,10 +11,18 @@ import CompanyInfo from "../components/companyInfo";
 import Carousel from "../components/carousel";
 import Tabs from "../components/tabs";
 import { Team } from "../components/Team";
+import { Helmet } from "react-helmet";
 
 const ContactPage = () => {
   return (
     <section className="about-page">
+      <Helmet>
+        <title>About | Simbanic</title>
+        <meta
+          name="description"
+          content="Simbanic, an digital company offer its strategic design, engineering, and industry capabilities for building digital transformation of the organization"
+        />
+      </Helmet>
       <div className="container mx-auto px-5 xl:px-0 mb-[45px]">
         <div className="text-center mt-[45px] relative pt-[53px] bg-[url('../public/images/services/productEng/slider-shadow.svg')] -z-20 bg-no-repeat bg-[center_top_0rem]">
           <SectionHeading>
@@ -62,7 +70,7 @@ const ContactPage = () => {
         <div>
           <div>
             <h4 className="uppercase text-center font-graphik font-semibold text-[14px] mt-24 mb-9 dark:text-[#4A505F]">
-              TRUSTED BY +250 BUSINESSEs
+              TRUSTED BY +15 BUSINESSEs
             </h4>
           </div>
           <div>

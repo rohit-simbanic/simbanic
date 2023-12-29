@@ -7,7 +7,7 @@ export default function Copyright() {
         <div className="container mx-auto">
           <div className="flex justify-between items-center xl:gap-0 gap-3 flex-col px-0 sm:px-7 xl:px-0 xl:flex-row">
             <p className="text-[#4C4C4C] text-[14px] font-graphik font-normal dark:text-gray-100">
-              © 2023 Simbanic. All Rights Reserved.
+              © 2024 Simbanic. All Rights Reserved.
             </p>
             <div className="flex gap-[.5rem]">
               <div className="bg-[#F4F4F4] p-2 rounded-full cursor-pointer">
@@ -18,7 +18,7 @@ export default function Copyright() {
                   alt={""}
                 />
               </div>
-              <div className="bg-[#F4F4F4] p-2 rounded-full cursor-pointer">
+              {/* <div className="bg-[#F4F4F4] p-2 rounded-full cursor-pointer">
                 <Image
                   src={require("@/public/images/footer/insta.svg")}
                   width={24}
@@ -33,7 +33,7 @@ export default function Copyright() {
                   height={24}
                   alt={""}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

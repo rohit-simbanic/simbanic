@@ -11,7 +11,6 @@ import { MdEmail } from "react-icons/md";
 import Hamburger from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa6";
-import getHired from "@/public/images/get-hired-1.png";
 import { usePathname } from "next/navigation";
 
 export default function HeaderMenu() {

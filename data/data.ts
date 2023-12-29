@@ -316,7 +316,7 @@ export const services = {
 export const companyInfo = [
   {
     id: 1,
-    heading: "100+",
+    heading: "25+",
     description: "Project Completed",
   },
   {
@@ -402,14 +402,16 @@ export const footerData = {
       country: "India",
       address:
         "612, Rhythm Plaza, Amar Jawan Cir, Nikol, Ahmedabad, Gujarat 382350",
+      icon: require("@/public/images/footer/map.svg"),
     },
     {
       country: "Canada",
       address: "219 Britton Place Kitchener ON N2C 2T3",
+      icon: require("@/public/images/footer/map-2.svg"),
     },
   ],
   phone: [
-    { num: "(+91) 76228 11355", img: require("@/public/images/india.png") },
+    { num: "+91 76228 11355", img: require("@/public/images/india.png") },
     { num: "+1 (437) (992) 8076", img: require("@/public/images/canada.png") },
   ],
   email: "info@simbanic.com",
@@ -451,4 +453,9 @@ export const contactInfo = [
     heading: "Email Us",
     details: "info@simbanic.com",
   },
+];
+
+export const metadata = [
+  { title: "home page", description: "test description" },
+  { title: "home page2", description: "test description2" },
 ];

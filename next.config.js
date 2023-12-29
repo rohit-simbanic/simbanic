@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   images: {
     remotePatterns: [
       {
@@ -15,6 +16,20 @@ const nextConfig = {
         hostname: "img.icons8.com",
       },
     ],
+  },
+
+  async headers() {
+    return [
+      {
+        source: "/",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "s-maxage=3600, stale-while-revalidate=59",
+          },
+        ],
+      },
+    ];
   },
 };
 

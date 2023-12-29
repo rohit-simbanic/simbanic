@@ -25,26 +25,23 @@ export default function Footer() {
                   priority={true}
                 />
               </Link>
-              <div className="flex gap-3 mb-4 items-start">
-                <Image
-                  src={require("@/public/images/footer/map.svg")}
-                  width={24}
-                  height={24}
-                  alt={""}
-                />
-                <div>
-                  {footerData.footerDetails.map((details, i) => (
-                    <div key={i} className="flex flex-col gap-2">
+
+              <div className="flex flex-col gap-3">
+                {footerData.footerDetails.map((details, i) => (
+                  <div key={i} className="flex gap-3 mb-4 items-start">
+                    <Image src={details.icon} width={24} height={24} alt={""} />
+                    <div className="flex flex-col gap-0">
                       <p className="text-[17px] text-[#4C4C4] dark:text-[#E5EDFE] font-prompt font-bold">
                         {details.country}
                       </p>
-                      <p className="text-[16px] text-[#4C4C4] dark:text-[#E5EDFE] font-graphik font-normal my-1 w-[87%]">
+                      <p className="text-[16px] text-[#4C4C4] dark:text-[#E5EDFE] font-graphik font-normal my-0 w-[87%]">
                         {details.address}
                       </p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
+
               <div className="flex gap-3 my-6">
                 <div>
                   <Image

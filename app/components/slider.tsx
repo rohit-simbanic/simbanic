@@ -95,7 +95,7 @@ export default function Slider() {
           </div>
           <div className="flex justify-center lg:justify-end">
             <Image
-              src={require("@/public/images/working_man.svg")}
+              src={require("@/public/images/working_man.png")}
               className="w-[100%] lg:w-[100%] pr-[2rem] sm:pr-0 lg:pr-[5.5rem]"
               alt={""}
             />

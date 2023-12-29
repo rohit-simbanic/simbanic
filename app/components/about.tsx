@@ -24,7 +24,7 @@ export default function About() {
             <div className="flex justify-center">
               {pathname === "/" ? (
                 <Image
-                  src={require("@/public/images/marketingStrategy.svg")}
+                  src={require("@/public/images/marketingStrategy.png")}
                   className="w-[100%] lg:w-[80%] pl-7 lg:pl-0"
                   alt={""}
                 />

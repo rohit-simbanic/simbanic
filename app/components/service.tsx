@@ -37,7 +37,7 @@ export default function Service() {
                       {truncateDescription(service.description)}{" "}
                       {service.description.split(" ").length > 6 ? "..." : ""}
                     </p>
-                    <div className="text-white text-[14px] font-medium font-graphik group-hover:text-[#e40059] group-hover:dark:text-[#A65CFF] relative sm:w-full w-[24%] mx-auto">
+                    <div className="text-white text-[14px] font-medium font-graphik group-hover:text-[#e40059] group-hover:dark:text-[#A65CFF] relative sm:w-full w-[34%] mx-auto">
                       <span className="hidden group-hover:inline-block absolute top-[2px] left-[-24px]">
                         <Image
                           src={rectangle}

@@ -24,9 +24,7 @@ const page = () => {
           <SectionHeading>
             <span className="dark:text-[#E5EDFE]">
               Connect with{" "}
-              <span className="text-[#e40059] dark:text-[#A65CFF]">
-                Simbanic:
-              </span>{" "}
+              <span className="heading-red dark:text-[#A65CFF]">Simbanic:</span>{" "}
               SuiteCRM
               <br />
               Specialists
@@ -48,9 +46,7 @@ const page = () => {
           <SectionHeading>
             <span className="dark:text-[#E5EDFE]">
               We love to{" "}
-              <span className="text-[#e40059] dark:text-[#A65CFF]">
-                collab{" "}
-              </span>{" "}
+              <span className="heading-red dark:text-[#A65CFF]">collab </span>{" "}
               with, Let’s do
               <br /> great together!
             </span>

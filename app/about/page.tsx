@@ -27,9 +27,11 @@ const ContactPage = () => {
         <div className="text-center mt-[45px] relative pt-[53px] bg-[url('../public/images/services/productEng/slider-shadow.svg')] -z-20 bg-no-repeat bg-[center_top_0rem]">
           <SectionHeading>
             <span className="dark:text-[#E5EDFE]">
-              <span className="heading-red dark:text-[#A65CFF]">Simbanic</span>{" "}
-              helps companies
-              <br /> work better together
+              <span className="heading-red dark:text-[#A65CFF]">
+                Empowering Business{" "}
+              </span>{" "}
+              With Software Engineering
+              <br /> Agile in Culture and Mindset.
             </span>
           </SectionHeading>
           {/* <Image
@@ -45,8 +47,9 @@ const ContactPage = () => {
               technology and business excellence. Established in 2015, we are
               more than a product engineering company; we&#39;re architects of
               tailored solutions for complex software engineering challenges.
-              From dynamic startups to Fortune 500 companies, we've partnered
-              with diverse organizations, delivering impactful results.
+              From dynamic startups to Fortune 500 companies, we&#39;ve
+              partnered with diverse organizations, delivering impactful
+              results.
             </p>
             <p className="text-[#4A505F] dark:text-[#A8ADB3] font-prompt text-[16px] text-center leading-[160%] my-3">
               In our Product Innovation Center, we redefine the role of

@@ -27,27 +27,46 @@ const ContactPage = () => {
         <div className="text-center mt-[45px] relative pt-[53px] bg-[url('../public/images/services/productEng/slider-shadow.svg')] -z-20 bg-no-repeat bg-[center_top_0rem]">
           <SectionHeading>
             <span className="dark:text-[#E5EDFE]">
-              <span className="text-[#e40059] dark:text-[#A65CFF]">
-                Simbanic
-              </span>{" "}
+              <span className="heading-red dark:text-[#A65CFF]">Simbanic</span>{" "}
               helps companies
               <br /> work better together
             </span>
           </SectionHeading>
-          <Image
+          {/* <Image
             src={require("@/public/images/contact/slider.svg")}
             alt={""}
             width={438}
             height={500}
             className={`w-[100%] mx-auto h-[219px] sm:h-[464px]`}
-          />
-          <p className="text-[#D7D2D2] dark:text-[#A8ADB3] font-prompt text-[16px] text-center leading-[160%]">
-            Our team consists of seasoned professionals with diverse technical
-            <br />
-            backgrounds. From software development and data analytics to
-            <br />
-            cybersecurity and AI, we have the expertise ...
-          </p>
+          /> */}
+          <div className=" md:w-4/5 mx-auto">
+            <p className="text-[#4A505F] dark:text-[#A8ADB3] font-prompt text-[16px] text-center leading-[160%] my-3">
+              Welcome to Simbanic, where we pioneer the intersection of
+              technology and business excellence. Established in 2015, we are
+              more than a product engineering company; we&#39;re architects of
+              tailored solutions for complex software engineering challenges.
+              From dynamic startups to Fortune 500 companies, we've partnered
+              with diverse organizations, delivering impactful results.
+            </p>
+            <p className="text-[#4A505F] dark:text-[#A8ADB3] font-prompt text-[16px] text-center leading-[160%] my-3">
+              In our Product Innovation Center, we redefine the role of
+              engineering, transforming potential bottlenecks into growth
+              catalysts. Through expertise in DevOps, cloud-native development,
+              and quality engineering services, we help you navigate and conquer
+              critical business challenges.
+            </p>
+            <p className="text-[#4A505F] dark:text-[#A8ADB3] font-prompt text-[16px] text-center leading-[160%] my-3">
+              What sets us apart is our Remote Agile Teams – dedicated engineers
+              seamlessly integrated into your project, preserving your company
+              culture and aligning with strategic objectives. Our goal is not
+              just to meet expectations but to exceed them, fostering a
+              collaborative journey towards success.
+            </p>
+            <p className="text-[#4A505F] dark:text-[#A8ADB3] font-prompt text-[16px] text-center leading-[160%] my-3">
+              Join us in embracing the future. At Simbanic, we don&#39;t just
+              navigate the waves of change; we create them.
+            </p>
+          </div>
         </div>
         <div className="text-center mt-[40px]">
           <SectionHeading>
@@ -77,7 +96,7 @@ const ContactPage = () => {
             <Carousel />
           </div>
         </div>
-        <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-8 lg:gap-10 xl:gap-20 mt-16">
+        {/* <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-8 lg:gap-10 xl:gap-20 mt-16">
           <div className="about-img">
             <div className="flex justify-start">
               <Image
@@ -100,8 +119,8 @@ const ContactPage = () => {
               <Tabs />
             </div>
           </div>
-        </div>
-        <Team />
+        </div> */}
+        {/* <Team /> */}
       </div>
 
       <CTA />

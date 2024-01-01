@@ -24,9 +24,8 @@ export default function Slider() {
               <SectionHeading>
                 <span className="dark:text-[#E5EDFE]">
                   Empowering <br />
-                  Business{" "}
-                  <span className="text-[#e40059] dark:text-[#A65CFF]">
-                    With
+                  <span className="heading-red dark:text-[#A65CFF]">
+                    Business With
                   </span>{" "}
                   <br />
                   Software Engineering

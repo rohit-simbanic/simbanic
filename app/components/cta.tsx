@@ -169,10 +169,12 @@ export default function CTA() {
                         {errors.message}
                       </p>
                     ) : null}
-                    <ReCAPTCHA
-                      sitekey="6LdrB0MpAAAAAKhoOn7N-MyrJCVAUiFguNJaIRNa"
-                      onChange={(val) => setCapVal(val)}
-                    />
+                    <div className="g-recaptcha">
+                      <ReCAPTCHA
+                        sitekey="6LdrB0MpAAAAAKhoOn7N-MyrJCVAUiFguNJaIRNa"
+                        onChange={(val) => setCapVal(val)}
+                      />
+                    </div>
                   </div>
                   {message && (
                     <div className="text-[green] ml-2 flex gap-2">

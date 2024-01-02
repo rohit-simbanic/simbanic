@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Copyright() {
   return (
@@ -11,12 +12,17 @@ export default function Copyright() {
             </p>
             <div className="flex gap-[.5rem]">
               <div className="bg-[#F4F4F4] p-2 rounded-full cursor-pointer">
-                <Image
-                  src={require("@/public/images/footer/linkedin.svg")}
-                  width={24}
-                  height={24}
-                  alt={""}
-                />
+                <Link
+                  href="https://in.linkedin.com/company/simbanic"
+                  target="_blank"
+                >
+                  <Image
+                    src={require("@/public/images/footer/linkedin.svg")}
+                    width={24}
+                    height={24}
+                    alt={""}
+                  />
+                </Link>
               </div>
               {/* <div className="bg-[#F4F4F4] p-2 rounded-full cursor-pointer">
                 <Image

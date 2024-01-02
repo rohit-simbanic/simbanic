@@ -1,13 +1,18 @@
 "use client";
-import { blogData } from "@/data/data";
-import React, { useState } from "react";
-import SectionHeading from "./section-heading";
+import React, { useEffect, useRef, useState } from "react";
 import { useTheme } from "../context/theme-context";
 import { useFormik } from "formik";
 import { submitSchema } from "./schema";
+import emailjs from "@emailjs/browser";
 
 export default function CTA() {
   const { theme } = useTheme();
+  const [message, setMessage] = useState("");
+
+  const displayMessage = (msg: React.SetStateAction<string>) => {
+    setMessage(msg);
+  };
+  const formRef = useRef(null);
   const initialValues = {
     name: "",
     company: "",
@@ -25,14 +30,37 @@ export default function CTA() {
           "🚀 ~ file: Registration.jsx ~ line 11 ~ Registration ~ values",
           values
         );
+
+        emailjs
+          .sendForm(
+            "service_ni20i9z",
+            "template_ae8cnim",
+            formRef.current,
+            "eQQC42DFdbeLgYxAU"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              displayMessage("Your message was sent successfully!");
+            },
+            (error) => {
+              console.log(error.text);
+              displayMessage("Failed to send message. Please try again.");
+            }
+          );
         action.resetForm();
       },
     });
 
-  console.log(
-    "🚀 ~ file: Registration.jsx ~ line 25 ~ Registration ~ errors",
-    errors
-  );
+  useEffect(() => {
+    const clearMessage = () => setMessage("");
+
+    if (message) {
+      const timerId = setTimeout(clearMessage, 5000);
+
+      return () => clearTimeout(timerId);
+    }
+  }, [message]);
   return (
     <>
       <section className="cta py-[80px] overlay__cta" id="contact">
@@ -48,7 +76,7 @@ export default function CTA() {
                   <div className="absolute inset-0 bg-gray-200 rounded-md"></div>
                   <div className="absolute inset-0 bg-[#2D83A6] w-1/3 rounded-md"></div>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form ref={formRef} onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
                     <div>
                       <input
@@ -140,6 +168,42 @@ export default function CTA() {
                       </p>
                     ) : null}
                   </div>
+                  {message && (
+                    <div className="text-[green] ml-2 flex gap-2">
+                      <svg
+                        width="20px"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          {" "}
+                          <path
+                            d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                            stroke="#588406"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>{" "}
+                          <path
+                            d="M7.75 12L10.58 14.83L16.25 9.17004"
+                            stroke="#588406"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>{" "}
+                        </g>
+                      </svg>
+                      {message}
+                    </div>
+                  )}
                   <div className="mt-6">
                     <div className="flex justify-end py-0 active text-[#1E273B] dark:text-[#C4CDE1]">
                       <button

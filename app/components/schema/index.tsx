@@ -7,7 +7,6 @@ export const submitSchema = Yup.object({
     .max(25)
     .required("Please enter your name"),
   company: Yup.string()
-    .matches(/^[a-zA-Z ]*$/, "Only characters are allowed")
     .min(5)
     .max(25)
     .required("Please enter your company name"),

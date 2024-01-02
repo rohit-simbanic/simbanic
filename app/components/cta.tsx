@@ -35,7 +35,7 @@ export default function CTA() {
           .sendForm(
             "service_ni20i9z",
             "template_ae8cnim",
-            formRef.current,
+            formRef.current!,
             "eQQC42DFdbeLgYxAU"
           )
           .then(

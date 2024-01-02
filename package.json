@@ -28,6 +28,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-google-recaptcha": "^2.1.8",
     "@types/react-helmet": "^6.1.11",
     "autoprefixer": "latest",
     "eslint": "latest",

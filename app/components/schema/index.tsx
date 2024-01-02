@@ -15,7 +15,6 @@ export const submitSchema = Yup.object({
     .typeError("That doesn't look like a phone number")
     .positive("A phone number can't start with a minus")
     .integer("A phone number can't include a decimal point")
-    .min(8)
-    .required("A phone number is required"),
+    .min(8),
   message: Yup.string().min(6).required("Please enter your message"),
 });

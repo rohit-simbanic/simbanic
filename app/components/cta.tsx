@@ -4,10 +4,12 @@ import { useTheme } from "../context/theme-context";
 import { useFormik } from "formik";
 import { submitSchema } from "./schema";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function CTA() {
   const { theme } = useTheme();
   const [message, setMessage] = useState("");
+  const [capVal, setCapVal] = useState<string | null>(null);
 
   const displayMessage = (msg: React.SetStateAction<string>) => {
     setMessage(msg);
@@ -86,7 +88,7 @@ export default function CTA() {
                         id="name"
                         value={values.name}
                         className="w-full border border-solid border-[#EBEBEB] rounded-[12px] mt-2 p-4"
-                        placeholder="Full Name"
+                        placeholder="Full Name *"
                         onChange={handleChange}
                         onBlur={handleBlur}
                       />
@@ -104,7 +106,7 @@ export default function CTA() {
                         id="company"
                         value={values.company}
                         className="w-full border border-solid border-[#EBEBEB] rounded-[12px] p-4"
-                        placeholder="Your Company Name"
+                        placeholder="Your Company Name *"
                         onChange={handleChange}
                         onBlur={handleBlur}
                       />
@@ -122,7 +124,7 @@ export default function CTA() {
                           id="email"
                           value={values.email}
                           className="w-full border border-solid border-[#EBEBEB] rounded-[12px] p-4"
-                          placeholder="Your Email"
+                          placeholder="Your Email *"
                           onChange={handleChange}
                           onBlur={handleBlur}
                         />
@@ -139,7 +141,7 @@ export default function CTA() {
                           name="phone"
                           value={values.phone}
                           className="w-full border border-solid border-[#EBEBEB] rounded-[12px] p-4"
-                          placeholder="Phone Number"
+                          placeholder="Phone Number *"
                           onChange={handleChange}
                           onBlur={handleBlur}
                         />
@@ -158,7 +160,7 @@ export default function CTA() {
                       value={values.message}
                       className="w-full border border-solid border-[#EBEBEB] rounded-[12px] p-4"
                       rows={4}
-                      placeholder="Your message"
+                      placeholder="Your message *"
                       onChange={handleChange}
                       onBlur={handleBlur}
                     ></textarea>
@@ -167,6 +169,10 @@ export default function CTA() {
                         {errors.message}
                       </p>
                     ) : null}
+                    <ReCAPTCHA
+                      sitekey="6LdrB0MpAAAAAKhoOn7N-MyrJCVAUiFguNJaIRNa"
+                      onChange={(val) => setCapVal(val)}
+                    />
                   </div>
                   {message && (
                     <div className="text-[green] ml-2 flex gap-2">
@@ -204,13 +210,17 @@ export default function CTA() {
                       {message}
                     </div>
                   )}
-                  <div className="mt-6">
-                    <div className="flex justify-end py-0 active text-[#1E273B] dark:text-[#C4CDE1]">
+
+                  <div className="mt-4">
+                    <div className="flex justify-start py-0 active text-[#1E273B] dark:text-[#C4CDE1]">
                       <button
                         type="submit"
+                        disabled={!capVal}
                         className={`flex items-center justify-center w-40 ${
                           theme === "dark" ? "bg-[#EC2F79]" : "bg-[#592CBA]"
-                        }  text-white py-4 px-0 rounded-[14px] hover:scale-[1.07]  transition-all backdrop-blur-[0.5rem] shadow-2xl m-auto lg:m-0`}
+                        }  ${
+                          capVal ? "text-white" : "text-gray-400"
+                        } py-4 px-0 rounded-[14px] hover:scale-[1.07]  transition-all backdrop-blur-[0.5rem] shadow-2xl m-auto lg:m-0`}
                       >
                         Submit
                       </button>

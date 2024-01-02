@@ -141,7 +141,7 @@ export default function CTA() {
                           name="phone"
                           value={values.phone}
                           className="w-full border border-solid border-[#EBEBEB] rounded-[12px] p-4"
-                          placeholder="Phone Number *"
+                          placeholder="Phone Number"
                           onChange={handleChange}
                           onBlur={handleBlur}
                         />

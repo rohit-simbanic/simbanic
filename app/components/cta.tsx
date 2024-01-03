@@ -45,7 +45,9 @@ export default function CTA() {
               console.log(result.text);
 
               displayMessage("Your message was sent successfully!");
-              window.location.reload();
+              setTimeout(() => {
+                window.location.reload();
+              }, 5000);
             },
             (error) => {
               console.log(error.text);

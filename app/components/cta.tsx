@@ -14,7 +14,7 @@ export default function CTA() {
   const displayMessage = (msg: React.SetStateAction<string>) => {
     setMessage(msg);
   };
-  const formRef = useRef(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
   const initialValues = {
     name: "",
     company: "",
@@ -43,13 +43,16 @@ export default function CTA() {
           .then(
             (result) => {
               console.log(result.text);
+
               displayMessage("Your message was sent successfully!");
+              window.location.reload();
             },
             (error) => {
               console.log(error.text);
               displayMessage("Failed to send message. Please try again.");
             }
           );
+
         action.resetForm();
       },
     });

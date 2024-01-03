@@ -4,6 +4,7 @@ import ThemeContextProvider from "./context/theme-context";
 import ThemeSwitch from "./components/theme-switch";
 import HeaderMenu from "./components/header-menu";
 const inter = Inter({ subsets: ["latin"] });
+require("dotenv").config();
 
 export default function RootLayout({
   children,

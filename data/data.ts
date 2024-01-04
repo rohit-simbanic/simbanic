@@ -303,13 +303,13 @@ export const services = {
         "Create resilient digital products by applying the principles of quality management processes and utilizing quality tools to ensure their excellence. We focus on continuously improving the quality of products through an ongoing cycle of planning, execution, and assessment.",
       logoUrl: require("@/public/images/services/productEng/s5.svg"),
     },
-    {
-      id: 6,
-      name: "Product Transformation and ReEngineering Services",
-      description:
-        "Enhance your product by implementing a more robust user experience or adopting a new architecture that supports SaaS delivery. Our product transformation services provide a seamless upgrade process with minimal disruption to existing users",
-      logoUrl: require("@/public/images/services/productEng/s6.svg"),
-    },
+    // {
+    //   id: 6,
+    //   name: "Product Transformation and ReEngineering Services",
+    //   description:
+    //     "Enhance your product by implementing a more robust user experience or adopting a new architecture that supports SaaS delivery. Our product transformation services provide a seamless upgrade process with minimal disruption to existing users",
+    //   logoUrl: require("@/public/images/services/productEng/s6.svg"),
+    // },
   ],
 };
 
